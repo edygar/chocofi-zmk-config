@@ -1,0 +1,445 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+#define DEFAULT_L 0
+
+/ {
+    behaviors {
+        dot_comma: dot_comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_COMMA";
+            bindings =
+                <&kp PERIOD>,
+                <&kp COMMA>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+        vim_i: vim_i {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_I";
+            bindings =
+                <&to 0>,
+                <&vim_I>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+        vim_o: vim_o {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_O";
+            bindings =
+                <&kp ENTER>,
+                <&vim_O>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+        vim_g: vim_g {
+            compatible = "zmk,behavior-tap-dance";
+            label = "VIM_G";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings =
+                <&vim_S_G>,
+                <&kp HOME>;
+        };
+        vim_c_r: vim_c_r {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_C_R";
+            bindings =
+                <&none>,
+                <&kp LG(LS(Z))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+        vim_S_G: vim_S_G {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_S_G";
+            bindings =
+                <&none>,
+                <&kp END>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+    };
+
+    macros {
+        aacute: aacute {
+            compatible = "zmk,behavior-macro";
+            label = "AACUTE";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E) &kp A>;
+        };
+        eacute: eacute {
+            compatible = "zmk,behavior-macro";
+            label = "EACUTE";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E) &kp E>;
+        };
+        iacute: iacute {
+            compatible = "zmk,behavior-macro";
+            label = "IACUTE";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E) &kp I>;
+        };
+        oacute: oacute {
+            compatible = "zmk,behavior-macro";
+            label = "OACUTE";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E) &kp O>;
+        };
+        uacute: uacute {
+            compatible = "zmk,behavior-macro";
+            label = "UACUTE";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E) &kp U>;
+        };
+        acirc: acirc {
+            compatible = "zmk,behavior-macro";
+            label = "ACIRC";
+            #binding-cells = <0>;
+            bindings = <&kp LA(I) &kp A>;
+        };
+        ecirc: ecirc {
+            compatible = "zmk,behavior-macro";
+            label = "ECIRC";
+            #binding-cells = <0>;
+            bindings = <&kp LA(I) &kp E>;
+        };
+        icirc: icirc {
+            compatible = "zmk,behavior-macro";
+            label = "ICIRC";
+            #binding-cells = <0>;
+            bindings = <&kp LA(I) &kp I>;
+        };
+        ocirc: ocirc {
+            compatible = "zmk,behavior-macro";
+            label = "OCIRC";
+            #binding-cells = <0>;
+            bindings = <&kp LA(I) &kp O>;
+        };
+        ucirc: ucirc {
+            compatible = "zmk,behavior-macro";
+            label = "UCIRC";
+            #binding-cells = <0>;
+            bindings = <&kp LA(I) &kp U>;
+        };
+        atilde: atilde {
+            compatible = "zmk,behavior-macro";
+            label = "ATILDE";
+            #binding-cells = <0>;
+            bindings = <&kp LA(N) &kp A>;
+        };
+        otilde: otilde {
+            compatible = "zmk,behavior-macro";
+            label = "OTILDE";
+            #binding-cells = <0>;
+            bindings = <&kp LA(N) &kp O>;
+        };
+        ao: ao {
+            compatible = "zmk,behavior-macro";
+            label = "AO";
+            #binding-cells = <0>;
+            bindings = <&kp LA(N) &kp A &kp O>;
+        };
+        oes: oes {
+            compatible = "zmk,behavior-macro";
+            label = "OES";
+            #binding-cells = <0>;
+            bindings = <&kp LA(N) &kp O &kp E &kp S>;
+        };
+        vim_word: vim_word {
+            compatible = "zmk,behavior-macro";
+            label = "VIM_WORD";
+            #binding-cells = <0>;
+            bindings = <&kp LA(RIGHT) &kp LA(RIGHT) &kp LA(LEFT)>;
+        };
+        vim_O: vim_O {
+            compatible = "zmk,behavior-macro";
+            label = "VIM_O";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT) &kp ENTER &kp LEFT>;
+        };
+        vim_dw: vim_dw {
+            compatible = "zmk,behavior-macro";
+            label = "VIM_DW";
+            #binding-cells = <0>;
+            bindings = <&vim_word &kp LA(BACKSPACE) &kp DELETE>;
+        };
+        vim_I: vim_I {
+            compatible = "zmk,behavior-macro";
+            label = "VIM_I";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT_ARROW) &to 0>;
+        };
+        vim_dd: vim_dd {
+            compatible = "zmk,behavior-macro";
+            label = "VIM_DD";
+            #binding-cells = <0>;
+            bindings = <&kp LG(RIGHT) &kp LG(BACKSPACE)>;
+        };
+        vim_dk: vim_dk {
+            compatible = "zmk,behavior-macro";
+            label = "VIM_DK";
+            #binding-cells = <0>;
+            bindings = <&vim_dd &kp UP_ARROW &vim_dd>;
+        };
+        vim_dj: vim_dj {
+            compatible = "zmk,behavior-macro";
+            label = "VIM_DJ";
+            #binding-cells = <0>;
+            bindings = <&vim_dd &vim_dd>;
+        };
+        vim_cw: vim_cw {
+            compatible = "zmk,behavior-macro";
+            label = "VIM_CW";
+            #binding-cells = <0>;
+            bindings = <&vim_dw &to 0>;
+        };
+        vim_cc: vim_cc {
+            compatible = "zmk,behavior-macro";
+            label = "VIM_CC";
+            #binding-cells = <0>;
+            bindings = <&vim_dd &to 0>;
+        };
+        vim_ck: vim_ck {
+            compatible = "zmk,behavior-macro";
+            label = "VIM_CK";
+            #binding-cells = <0>;
+            bindings = <&vim_dk &to 0>;
+        };
+        vim_cj: vim_cj {
+            compatible = "zmk,behavior-macro";
+            label = "VIM_CJ";
+            #binding-cells = <0>;
+            bindings = <&vim_dj &to 0>;
+        };
+        vim_ch: vim_ch {
+            compatible = "zmk,behavior-macro";
+            label = "VIM_CH";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE &to 0>;
+        };
+        vim_cl: vim_cl {
+            compatible = "zmk,behavior-macro";
+            label = "VIM_CL";
+            #binding-cells = <0>;
+            bindings = <&kp DELETE &to 0>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        rbracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <18 17>;
+        };
+
+        lbracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <17 16>;
+        };
+
+        lparenthesis {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <7 6>;
+        };
+
+        rparenthesis {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <8 7>;
+        };
+
+        lbrace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <27 26>;
+        };
+
+        rbrace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <28 27>;
+        };
+
+        equals {
+            bindings = <&kp EQUAL>;
+            key-positions = <9 8>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <8 9>;
+        };
+
+        sqt {
+            bindings = <&kp SQT>;
+            key-positions = <19 18>;
+        };
+
+        bslash {
+            bindings = <&kp BSLH>;
+            key-positions = <29 28>;
+        };
+
+        amps {
+            bindings = <&kp AMPS>;
+            key-positions = <16 15>;
+        };
+
+        grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <0 1>;
+        };
+
+        excl {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <1 2>;
+        };
+
+        at {
+            bindings = <&kp AT>;
+            key-positions = <2 3>;
+        };
+
+        hash {
+            bindings = <&kp HASH>;
+            key-positions = <3 4>;
+        };
+
+        caret {
+            bindings = <&kp CARET>;
+            key-positions = <10 11>;
+        };
+
+        dollar {
+            bindings = <&kp DOLLAR>;
+            key-positions = <12 13>;
+        };
+
+        euro {
+            bindings = <&kp LS(LA(NUMBER_2))>;
+            key-positions = <11 12>;
+        };
+
+        lesc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <2 2 3 1 0>;
+        };
+
+        resc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <7 6 8 9>;
+        };
+
+        VIM_IN {
+            bindings = <&to 6>;
+            key-positions = <10 11 12 13 16 17 19 18>;
+        };
+
+        VIM_OUT {
+            bindings = <&to 0>;
+            key-positions = <0 1 2 3 6 7 8 9>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            label = "DEF";
+            bindings = <
+      &kp Q       &kp W     &lt 2 E      &lt 1 R          &kp T                    &kp Y      &lt 2 U     &lt 1 I       &kp O     &kp P
+&mt LCTRL A  &mt LALT S  &mt LGUI D  &mt LSHFT F         &vim_g                  &lt 5 H  &mt RSHFT J  &mt RGUI K  &mt RALT L  &kp SEMI
+      &kp Z       &kp X       &kp C        &kp V          &kp B                  &lt 3 N        &kp M   &kp COMMA     &kp DOT  &kp FSLH
+ &kp DELETE     &kp TAB   &kp SPACE    &kp ENTER  &kp BACKSPACE  &kp ESCAPE
+            >;
+        };
+
+        acute {
+            bindings = <
+ &trans  &trans  &eacute  &trans  &trans              &trans  &uacute  &iacute  &oacute  &trans
+&aacute  &trans   &trans  &trans  &trans              &trans   &trans   &trans   &trans  &trans
+ &trans  &trans   &trans  &trans  &trans              &trans   &trans   &trans   &trans  &trans
+ &trans  &trans   &trans  &trans  &trans  &trans
+            >;
+
+            label = "acute";
+        };
+
+        circ {
+            bindings = <
+&trans  &trans  &ecirc  &trans  &trans              &trans  &ucirc  &icirc  &ocirc  &trans
+&acirc  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "circ";
+        };
+
+        tilde {
+            bindings = <
+ &trans  &trans  &trans  &trans  &trans              &trans     &trans  &trans    &oes  &trans
+&atilde     &ao  &trans  &trans  &trans              &trans     &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans              &trans  &kp TILDE  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        numpad {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                     &kp STAR  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp PLUS
+&trans  &trans  &trans  &trans  &trans                    &kp SLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &kp MINUS
+&trans  &trans  &trans  &trans  &trans                 &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &dot_comma
+&trans  &trans  &trans  &trans  &trans  &kp EQUAL
+            >;
+        };
+
+        symbols {
+            bindings = <
+&kp EXCLAMATION    &kp AT_SIGN          &kp HASH            &kp DOLLAR            &kp PERCENT              &trans  &trans  &trans  &trans  &trans
+      &kp CARET  &kp AMPERSAND      &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS              &trans  &trans  &trans  &trans  &trans
+      &kp MINUS      &kp EQUAL  &kp LS(NUMBER_2)      &kp LEFT_BRACKET               &kp RBKT              &trans  &trans  &trans  &trans  &trans
+         &trans         &trans            &trans                &trans                 &trans  &trans
+            >;
+
+            label = "symbols";
+        };
+
+        VIM {
+            bindings = <
+&none   &vim_word  &kp LA(RIGHT)  &none  &none             &kp LG(C)  &kp LG(Z)        &to 0  &vim_o  &kp LG(V)
+&to 0       &none          &none  &none  &none                 &none      &none        &none   &none      &none
+&none  &kp DELETE          &none  &none  &none                 &none      &none  &key_repeat   &none      &none
+&none       &none          &none  &none  &none  &none
+            >;
+        };
+
+        VIM_DELETE {
+            bindings = <
+&none  &vim_dw  &kp LA(DELETE)  &none              &none                     &none    &none    &none       &none  &none
+&none    &none           &none  &none              &none             &kp BACKSPACE  &vim_dj  &vim_dk  &kp DELETE  &none
+&none    &none           &none  &none  &kp LA(BACKSPACE)                     &none    &none    &none       &none  &none
+&none    &none           &none  &none              &none  &none
+            >;
+        };
+
+        vim_change {
+            bindings = <
+&none  &vim_cw    &none  &none  &none               &none    &none    &none    &none  &none
+&none    &none    &none  &none  &none             &vim_ch  &vim_cj  &vim_ck  &vim_cl  &none
+&none    &none  &vim_cc  &none  &none               &none    &none    &none    &none  &none
+&none    &none    &none  &none  &none  &none
+            >;
+        };
+    };
+};
