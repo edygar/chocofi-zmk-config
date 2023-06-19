@@ -444,10 +444,10 @@
 
         FN {
             bindings = <
-&kp  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC  &kp           &kp  &kp F7  &kp F8  &kp F9  &kp F11
-&kp          &kp C_VOL_DN             &kp C_MUTE          &kp C_VOL_UP  &kp           &kp  &kp F4  &kp F5  &kp F6  &kp F12
-&kp            &kp C_PREV            &kp C_PAUSE            &kp C_NEXT  &kp           &kp  &kp F1  &kp F2  &kp F3      &kp
-&kp                   &kp                    &kp                   &kp  &kp  &kp
+&none  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC  &none             &none  &kp F7  &kp F8  &kp F9  &kp F11
+&none          &kp C_VOL_DN             &kp C_MUTE          &kp C_VOL_UP  &none             &none  &kp F4  &kp F5  &kp F6  &kp F12
+&none            &kp C_PREV            &kp C_PAUSE            &kp C_NEXT  &none             &none  &kp F1  &kp F2  &kp F3    &none
+&none                 &none                  &none                 &none  &none  &none
             >;
         };
     };
