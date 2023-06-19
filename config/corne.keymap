@@ -349,6 +349,16 @@
             bindings = <&to 0>;
             key-positions = <0 1 2 3 6 7 8 9>;
         };
+
+        toggle_shift {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <13 16>;
+        };
+
+        cmd_esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <12 16>;
+        };
     };
 
     keymap {
@@ -424,15 +434,6 @@
             >;
         };
 
-        VIM_DELETE {
-            bindings = <
-&none  &vim_dw  &kp LA(DELETE)  &none              &none                     &none    &none    &none       &none  &none
-&none    &none           &none  &none              &none             &kp BACKSPACE  &vim_dj  &vim_dk  &kp DELETE  &none
-&none    &none           &none  &none  &kp LA(BACKSPACE)                     &none    &none    &none       &none  &none
-&none    &none           &none  &none              &none  &none
-            >;
-        };
-
         vim_change {
             bindings = <
 &none  &vim_cw    &none  &none  &none               &none    &none    &none    &none  &none
@@ -442,12 +443,21 @@
             >;
         };
 
+        VIM_DELETE {
+            bindings = <
+&none  &vim_dw  &kp LA(DELETE)  &none              &none                     &none    &none    &none       &none  &none
+&none    &none           &none  &none              &none             &kp BACKSPACE  &vim_dj  &vim_dk  &kp DELETE  &none
+&none    &none           &none  &none  &kp LA(BACKSPACE)                     &none    &none    &none       &none  &none
+&none    &none           &none  &none              &none  &none
+            >;
+        };
+
         FN {
             bindings = <
-&none  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC  &none             &none  &kp F7  &kp F8  &kp F9  &kp F11
-&none          &kp C_VOL_DN             &kp C_MUTE          &kp C_VOL_UP  &none             &none  &kp F4  &kp F5  &kp F6  &kp F12
-&none            &kp C_PREV            &kp C_PAUSE            &kp C_NEXT  &none             &none  &kp F1  &kp F2  &kp F3    &none
-&none                 &none                  &none                 &none  &none  &none
+&none  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC  &kp K_LOCK             &kp K_LOCK  &kp F7  &kp F8  &kp F9  &kp F11
+&none          &kp C_VOL_DN             &kp C_MUTE          &kp C_VOL_UP       &none                  &none  &kp F4  &kp F5  &kp F6  &kp F12
+&none            &kp C_PREV            &kp C_PAUSE            &kp C_NEXT       &none                  &none  &kp F1  &kp F2  &kp F3    &none
+&none                 &none                  &none                 &none       &none  &none
             >;
         };
     };
