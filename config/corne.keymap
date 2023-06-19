@@ -357,10 +357,10 @@
         default_layer {
             label = "DEF";
             bindings = <
-      &kp Q       &kp W     &lt 2 E      &lt 1 R          &kp T                    &kp Y      &lt 2 U     &lt 1 I       &kp O     &kp P
-&mt LCTRL A  &mt LALT S  &mt LGUI D  &mt LSHFT F         &vim_g                  &lt 5 H  &mt RSHFT J  &mt RGUI K  &mt RALT L  &kp SEMI
-      &kp Z       &kp X       &kp C        &kp V          &kp B                  &lt 3 N        &kp M   &kp COMMA     &kp DOT  &kp FSLH
- &kp DELETE     &kp TAB   &kp SPACE    &kp ENTER  &kp BACKSPACE  &kp ESCAPE
+      &kp Q       &kp W      &lt 2 E      &lt 1 R          &kp T                    &kp Y      &lt 2 U     &lt 1 I       &kp O        &kp P
+&mt LCTRL A  &mt LALT S   &mt LGUI D  &mt LSHFT F         &vim_g                  &lt 5 H  &mt RSHFT J  &mt RGUI K  &mt RALT L     &kp SEMI
+    &lt 9 Z       &kp X        &kp C        &kp V          &kp B                  &lt 3 N        &kp M   &kp COMMA     &kp DOT  &lt 9 SLASH
+ &kp DELETE     &kp TAB  &lt 6 SPACE    &kp ENTER  &kp BACKSPACE  &kp ESCAPE
             >;
         };
 
@@ -439,6 +439,15 @@
 &none    &none    &none  &none  &none             &vim_ch  &vim_cj  &vim_ck  &vim_cl  &none
 &none    &none  &vim_cc  &none  &none               &none    &none    &none    &none  &none
 &none    &none    &none  &none  &none  &none
+            >;
+        };
+
+        FN {
+            bindings = <
+&kp  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC  &kp           &kp  &kp F7  &kp F8  &kp F9  &kp F11
+&kp          &kp C_VOL_DN             &kp C_MUTE          &kp C_VOL_UP  &kp           &kp  &kp F4  &kp F5  &kp F6  &kp F12
+&kp            &kp C_PREV            &kp C_PAUSE            &kp C_NEXT  &kp           &kp  &kp F1  &kp F2  &kp F3      &kp
+&kp                   &kp                    &kp                   &kp  &kp  &kp
             >;
         };
     };
