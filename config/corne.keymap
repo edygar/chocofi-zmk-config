@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 
 #define DEFAULT_L 0
 
@@ -359,6 +360,11 @@
             bindings = <&kp ESCAPE>;
             key-positions = <12 16>;
         };
+
+        fntap {
+            bindings = <&sl 9>;
+            key-positions = <33 34>;
+        };
     };
 
     keymap {
@@ -367,10 +373,10 @@
         default_layer {
             label = "DEF";
             bindings = <
-      &kp Q       &kp W      &lt 2 E      &lt 1 R          &kp T                    &kp Y      &lt 2 U     &lt 1 I       &kp O        &kp P
-&mt LCTRL A  &mt LALT S   &mt LGUI D  &mt LSHFT F         &vim_g                  &lt 5 H  &mt RSHFT J  &mt RGUI K  &mt RALT L     &kp SEMI
-    &lt 9 Z       &kp X        &kp C        &kp V          &kp B                  &lt 3 N        &kp M   &kp COMMA     &kp DOT  &lt 9 SLASH
- &kp DELETE     &kp TAB  &lt 6 SPACE    &kp ENTER  &kp BACKSPACE  &kp ESCAPE
+        &kp Q       &kp W      &lt 2 E      &lt 1 R         &kp T                       &kp Y      &lt 2 U     &lt 1 I       &kp O                &kp P
+  &mt LCTRL A  &mt LALT S   &mt LGUI D  &mt LSHFT F       &lt 4 G                     &lt 5 H  &mt RSHFT J  &mt RGUI K  &mt RALT L  &mt RCTRL SEMICOLON
+        &kp Z       &kp X        &kp C        &kp V         &kp B                     &lt 3 N        &kp M   &kp COMMA     &kp DOT            &kp SLASH
+&kp BACKSPACE   &lt 5 TAB  &lt 6 SPACE  &lt 6 ENTER  &lt 4 ESCAPE  &lt 10 DELETE
             >;
         };
 
@@ -407,10 +413,10 @@
 
         numpad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                     &kp STAR  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp PLUS
-&trans  &trans  &trans  &trans  &trans                    &kp SLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &kp MINUS
-&trans  &trans  &trans  &trans  &trans                 &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &dot_comma
-&trans  &trans  &trans  &trans  &trans  &kp EQUAL
+&trans  &trans  &trans  &trans     &trans                  &kp STAR  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp PLUS
+&trans  &trans  &trans  &trans     &trans                 &kp SLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &kp MINUS
+&trans  &trans  &trans  &trans     &trans              &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &dot_comma
+&trans  &trans  &trans  &trans  &kp EQUAL  &trans
             >;
         };
 
@@ -427,10 +433,10 @@
 
         VIM {
             bindings = <
-&none   &vim_word  &kp LA(RIGHT)  &none  &none             &kp LG(C)  &kp LG(Z)        &to 0  &vim_o  &kp LG(V)
-&to 0       &none          &none  &none  &none                 &none      &none        &none   &none      &none
-&none  &kp DELETE          &none  &none  &none                 &none      &none  &key_repeat   &none      &none
-&none       &none          &none  &none  &none  &none
+ &none   &vim_word  &kp LA(RIGHT)           &none   &none              &kp LG(C)  &kp LG(Z)        &to 0  &vim_o  &kp LG(V)
+ &to 0       &none          &to 8           &none  &vim_g                  &none      &none        &none   &none      &none
+ &none  &kp DELETE          &to 7  &kt LEFT_SHIFT   &none                  &none      &none  &key_repeat   &none      &none
+&trans       &to 0          &none          &trans  &trans  &trans
             >;
         };
 
@@ -452,21 +458,21 @@
             >;
         };
 
-        FN {
+        FN_R {
             bindings = <
-&trans  &trans  &trans  &trans  &trans             &kp K_LOCK  &kp F7  &kp F8  &kp F9  &kp F11
-&trans          &trans             &trans          &trans       &trans                  &trans  &kp F4  &kp F5  &kp F6  &kp F12
-&trans            &trans            &trans            &trans       &trans                  &trans  &kp F1  &kp F2  &kp F3    &trans
-&trans                 &trans                  &trans                 &trans       &trans  &trans
+&trans  &trans  &trans  &trans  &trans              &kp K_LOCK  &kp F7  &kp F8  &kp F9  &kp F11
+&trans  &trans  &trans  &trans  &trans                  &trans  &kp F4  &kp F5  &kp F6  &kp F12
+&trans  &trans  &trans  &trans  &trans                  &trans  &kp F1  &kp F2  &kp F3   &trans
+&trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
-        MEDIA {
+        MEDIA_R {
             bindings = <
-&trans  &trans  &trans  &trans  &trans        &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC  &kp K_LOCK
-&trans  &trans  &trans  &trans  &trans        &trans          &kp C_VOL_DN             &kp C_MUTE          &kp C_VOL_UP       &trans
-&trans  &trans  &trans  &trans  &trans        &trans            &kp C_PREV            &kp C_PAUSE            &kp C_NEXT       &trans
-&trans                 &trans                  &trans                 &trans       &trans  &trans
+&trans  &trans  &trans  &trans  &trans              &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC  &kp K_LOCK
+&trans  &trans  &trans  &trans  &trans              &trans          &kp C_VOL_DN             &kp C_MUTE          &kp C_VOL_UP      &trans
+&trans  &trans  &trans  &trans  &trans              &trans            &kp C_PREV            &kp C_PAUSE            &kp C_NEXT      &trans
+&trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
