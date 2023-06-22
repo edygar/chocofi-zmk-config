@@ -236,6 +236,12 @@
             #binding-cells = <0>;
             bindings = <&kp DELETE &to 0>;
         };
+        aes: aes {
+            compatible = "zmk,behavior-macro";
+            label = "AES";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E) &kp A &kp E &kp S>;
+        };
     };
 
     combos {
@@ -409,10 +415,10 @@
 
         tilde {
             bindings = <
- &trans  &trans  &trans  &trans  &trans              &trans     &trans  &trans    &oes  &trans
-&atilde     &ao  &trans  &trans  &trans              &trans     &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans              &trans  &kp TILDE  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans     &trans  &trans  &trans              &trans     &trans  &trans    &oes  &trans
+&atilde     &ao       &aes  &trans  &trans              &trans     &trans  &trans  &trans  &trans
+ &trans  &trans  &kp LA(C)  &trans  &trans              &trans  &kp TILDE  &trans  &trans  &trans
+ &trans  &trans     &trans  &trans  &trans  &trans
             >;
         };
 
