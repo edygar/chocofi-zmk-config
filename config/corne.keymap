@@ -6,7 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT_L 0
 
@@ -471,9 +471,9 @@
 
         FN_R {
             bindings = <
-&none &trans  &trans  &trans  &trans  &trans              &kp K_LOCK  &kp F7  &kp F8  &kp F9  &kp F11  &none
-&none &trans  &trans  &trans  &trans  &trans                  &trans  &kp F4  &kp F5  &kp F6  &kp F12  &none
-&none &trans  &trans  &trans  &trans  &trans                  &trans  &kp F1  &kp F2  &kp F3   &trans  &none
+&none &trans  &trans  &trans  &trans  &trans              &kp K_LOCK  &kp F7  &kp F8  &kp F9  &kp F11  &bt BT_CLR  
+&none &trans  &trans  &trans  &trans  &trans                  &trans  &kp F4  &kp F5  &kp F6  &kp F12  &bt BT_SEL 0
+&none &trans  &trans  &trans  &trans  &trans                  &trans  &kp F1  &kp F2  &kp F3   &trans  &bt BT_SEL 1
 &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
@@ -498,9 +498,9 @@
 
         FN_L {
             bindings = <
-&none &kp K_LOCK  &kp F7  &kp F8  &kp F9  &kp F11              &trans  &trans  &trans  &trans  &trans  &none
-&none     &trans  &kp F4  &kp F5  &kp F6  &kp F12              &trans  &trans  &trans  &trans  &trans  &none
-&none     &trans  &kp F1  &kp F2  &kp F3   &trans              &trans  &trans  &trans  &trans  &trans  &none
+&bt BT_CLR      &kp K_LOCK  &kp F7  &kp F8  &kp F9  &kp F11              &trans  &trans  &trans  &trans  &trans  &none
+&bt BT_SEL 0    &trans  &kp F4  &kp F5  &kp F6  &kp F12              &trans  &trans  &trans  &trans  &trans  &none
+&bt BT_SEL 1    &trans  &kp F1  &kp F2  &kp F3   &trans              &trans  &trans  &trans  &trans  &trans  &none
     &trans  &trans  &trans  &trans   &trans  &trans
             >;
         };
