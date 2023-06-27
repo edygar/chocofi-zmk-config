@@ -275,9 +275,9 @@
         default_layer {
             label = "DEF";
             bindings = <
-&none        &kp Q       &kp W        &lt 2 E      &lt 1 R   &lt 12 T            &lt 9 Y      &lt 2 U        &lt 1 I       &kp O                &kp P   &none
-&none  &mt LCTRL A  &mt LALT S     &mt LGUI D  &mt LSHFT F    &lt 4 G            &lt 5 H  &mt RSHFT J     &mt RGUI K  &mt RALT L  &mt RCTRL SEMICOLON   &none
-&none        &kp Z       &kp X          &kp C        &kp V      &kp B            &lt 3 N        &kp M      &kp COMMA     &kp DOT            &kp SLASH  &trans
+&none        &kp Q       &kp W        &lt 2 E      &lt 1 R      &kp T              &kp Y      &lt 2 U        &lt 1 I       &kp O                &kp P  &none
+&none  &mt LCTRL A  &mt LALT S     &mt LGUI D  &mt LSHFT F    &lt 4 G            &lt 5 H  &mt RSHFT J     &mt RGUI K  &mt RALT L  &mt RCTRL SEMICOLON  &none
+&none        &kp Z       &kp X          &kp C        &kp V      &kp B            &lt 3 N        &kp M      &kp COMMA     &kp DOT            &kp SLASH  &none
                                 &lt 11 ESCAPE  &lt 6 SPACE  &lt 5 TAB    &lt 6 BACKSPACE  &lt 4 ENTER  &lt 10 DELETE
             >;
         };
@@ -371,28 +371,28 @@
 
         MEDIA_R {
             bindings = <
-&none  &trans  &trans  &trans  &trans  &trans    &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC  &kp K_LOCK  &none
-&none  &trans  &trans  &trans  &trans  &trans    &trans          &kp C_VOL_DN             &kp C_MUTE          &kp C_VOL_UP      &trans  &none
-&none  &trans  &trans  &trans  &trans  &trans    &trans            &kp C_PREV            &kp C_PAUSE            &kp C_NEXT      &trans  &none
-                       &trans  &trans  &trans    &trans                &trans                 &trans
+&none  &trans  &trans  &trans  &trans  &trans        &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC   &none  &none
+&none  &trans  &trans  &trans  &trans  &trans        &trans          &kp C_VOL_DN             &kp C_MUTE          &kp C_VOL_UP  &trans  &none
+&none  &trans  &trans  &trans  &trans  &trans        &trans            &kp C_PREV            &kp C_PAUSE            &kp C_NEXT  &trans  &none
+                       &trans  &trans  &trans    &bt BT_CLR          &bt BT_SEL 1           &bt BT_SEL 0
             >;
         };
 
         MEDIA_L {
             bindings = <
-&none  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC  &kp K_LOCK    &trans  &trans  &trans  &trans  &trans  &none
-&none  &trans          &kp C_VOL_DN             &kp C_MUTE          &kp C_VOL_UP      &trans    &trans  &trans  &trans  &trans  &trans  &none
-&none  &trans            &kp C_PREV            &kp C_PAUSE            &kp C_NEXT      &trans    &trans  &trans  &trans  &trans  &trans  &none
-                                                    &trans                &trans      &trans    &trans  &trans  &trans
+&none  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC   &none    &trans  &trans  &trans  &trans  &trans  &none
+&none  &trans          &kp C_VOL_DN             &kp C_MUTE          &kp C_VOL_UP  &trans    &trans  &trans  &trans  &trans  &trans  &none
+&none  &trans            &kp C_PREV            &kp C_PAUSE            &kp C_NEXT  &trans    &trans  &trans  &trans  &trans  &trans  &none
+                                                    &trans                &trans  &trans    &trans  &trans  &trans
             >;
         };
 
         FN_L {
             bindings = <
-  &bt BT_CLR  &none  &kp F7  &kp F8  &kp F9     &kp F11    &none  &none  &none  &none  &none  &none
-&bt BT_SEL 0  &none  &kp F4  &kp F5  &kp F6     &kp F12    &none  &none  &none  &none  &none  &none
-&bt BT_SEL 1  &none  &kp F1  &kp F2  &kp F3  &kp K_LOCK    &none  &none  &none  &none  &none  &none
-                              &none   &none       &none    &none  &none  &none
+&none  &trans  &kp F7        &kp F8        &kp F9     &kp F11    &trans  &trans  &trans  &trans  &trans  &none
+&none  &trans  &kp F4        &kp F5        &kp F6     &kp F12    &trans  &trans  &trans  &trans  &trans  &none
+&none  &trans  &kp F1        &kp F2        &kp F3  &kp K_LOCK    &trans  &trans  &trans  &trans  &trans  &none
+                       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR    &trans  &trans  &trans
             >;
         };
     };
