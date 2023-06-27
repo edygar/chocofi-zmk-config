@@ -275,7 +275,7 @@
         default_layer {
             label = "DEF";
             bindings = <
-&none        &kp Q       &kp W        &lt 2 E      &lt 1 R   &lt 12 R            &lt 9 Y      &lt 2 U        &lt 1 I       &kp O                &kp P  &none
+&none        &kp Q       &kp W        &lt 2 E      &lt 1 R   &lt 12 T            &lt 9 Y      &lt 2 U        &lt 1 I       &kp O                &kp P  &none
 &none  &mt LCTRL A  &mt LALT S     &mt LGUI D  &mt LSHFT F    &lt 4 G            &lt 5 H  &mt RSHFT J     &mt RGUI K  &mt RALT L  &mt RCTRL SEMICOLON  &none
 &none        &kp Z       &kp X          &kp C        &kp V      &kp B            &lt 3 N        &kp M      &kp COMMA     &kp DOT            &kp SLASH  &none
                                 &lt 11 ESCAPE  &lt 6 SPACE  &lt 5 TAB    &lt 6 BACKSPACE  &lt 4 ENTER  &lt 10 DELETE
