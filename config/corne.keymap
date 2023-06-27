@@ -243,6 +243,12 @@
             #binding-cells = <0>;
             bindings = <&kp LA(E) &kp A &kp E &kp S>;
         };
+        vim_ce: vim_ce {
+            compatible = "zmk,behavior-macro";
+            label = "VIM_CE";
+            #binding-cells = <0>;
+            bindings = <&kp LA(DELETE) &to 0>;
+        };
     };
 
     combos {
@@ -335,17 +341,17 @@
 
         VIM {
             bindings = <
-&none  &none   &vim_word  &kp LA(RIGHT)           &none   &none    &kp LG(C)  &kp LG(Z)        &to 0  &vim_o  &kp LG(V)  &none
-&none  &to 0       &none          &to 8           &none  &vim_g        &none      &none        &none   &none      &none  &none
-&none  &none  &kp DELETE          &to 7  &kt LEFT_SHIFT   &none        &none      &none  &key_repeat   &none      &none  &none
-                                 &trans           &to 0   &none       &trans     &trans       &trans
+&none  &none   &vim_word  &kp LA(RIGHT)           &none   &none    &kp K_COPY  &kp K_UNDO   &to 0       &vim_o  &kp K_PASTE  &none
+&none  &to 0       &none          &to 8           &none  &vim_g      &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT        &none  &none
+&none  &none  &kp DELETE          &to 7  &kt LEFT_SHIFT   &none         &none       &none   &none  &key_repeat        &none  &none
+                                 &trans           &to 0   &none        &trans      &trans  &trans
             >;
         };
 
         vim_change {
             bindings = <
 &none  &none  &vim_cw    &none  &none  &none      &none    &none    &none    &none  &none  &none
-&none  &none    &none    &none  &none  &none    &vim_ch  &vim_cj  &vim_ck  &vim_cl  &none  &none
+&none  &none    &mo 8    &none  &none  &none    &vim_ch  &vim_cj  &vim_ck  &vim_cl  &none  &none
 &none  &none    &none  &vim_cc  &none  &none      &none    &none    &none    &none  &none  &none
                          &none  &none  &none      &none    &none    &none
             >;
@@ -356,7 +362,7 @@
 &none  &none  &vim_dw  &kp LA(DELETE)  &none              &none            &none    &none    &none       &none  &none  &none
 &none  &none    &none           &none  &none              &none    &kp BACKSPACE  &vim_dj  &vim_dk  &kp DELETE  &none  &none
 &none  &none    &none           &none  &none  &kp LA(BACKSPACE)            &none    &none    &none       &none  &none  &none
-                                &none  &none              &none            &none    &none    &none
+                                &to 6  &none              &none            &none    &none    &none
             >;
         };
 
