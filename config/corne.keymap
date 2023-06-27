@@ -279,6 +279,76 @@
             bindings = <&kp ESCAPE>;
             key-positions = <15 20>;
         };
+
+        rbracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <21 33>;
+        };
+
+        lbracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <9 21>;
+        };
+
+        lpar {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <19 7>;
+        };
+
+        rpart {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <31 19>;
+        };
+
+        lbrace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <20 8>;
+        };
+
+        rbrace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <32 20>;
+        };
+
+        eq {
+            bindings = <&kp EQUAL>;
+            key-positions = <10 9>;
+        };
+
+        under {
+            bindings = <&kp UNDER>;
+            key-positions = <9 8 7>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <9 8>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <10 9 8>;
+        };
+
+        combo_slsh {
+            bindings = <&kp SLASH>;
+            key-positions = <10 22>;
+        };
+
+        combo_sqt {
+            bindings = <&kp SQT>;
+            key-positions = <22 34>;
+        };
+
+        combo_star {
+            bindings = <&kp STAR>;
+            key-positions = <6 18>;
+        };
+
+        combo_ampersand {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <18 30>;
+        };
     };
 
     keymap {
