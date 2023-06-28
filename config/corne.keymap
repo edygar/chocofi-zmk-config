@@ -273,7 +273,7 @@
         };
 
         VIM_OUT {
-            bindings = <&to 0>;
+            bindings = <&esc_0>;
             key-positions = <15 20>;
         };
 
