@@ -73,6 +73,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
         };
+        vim_backspace: vim_backspace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_BACKSPACE";
+            bindings =
+                <&kp LA(BACKSPACE)>,
+                <&kp LA(DELETE)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
     };
 
     macros {
@@ -404,10 +414,10 @@
 
         VIM {
             bindings = <
-&none      &none   &vim_word  &kp LA(RIGHT)           &none         &none    &kp K_COPY  &kp K_UNDO          &to 0       &vim_o  &kp K_PASTE  &none
-&none  &kp LCTRL    &kp LALT   &kp LEFT_GUI  &kp LEFT_SHIFT        &vim_g      &kp LEFT    &kp DOWN         &kp UP    &kp RIGHT        &none  &none
-&none      &none  &kp DELETE          &none  &kt LEFT_SHIFT  &kp LA(LEFT)         &none       &none          &none  &key_repeat        &none  &none
-                               &kp LG(LEFT)          &trans         &none    &vim_bkspc      &trans  &kp RG(RIGHT)
+&none      &none   &vim_word  &kp LA(RIGHT)           &none         &none        &kp K_COPY  &kp K_UNDO          &to 0       &vim_o  &kp K_PASTE  &none
+&none  &kp LCTRL    &kp LALT   &kp LEFT_GUI  &kp LEFT_SHIFT        &vim_g          &kp LEFT    &kp DOWN         &kp UP    &kp RIGHT        &none  &none
+&none      &none  &kp DELETE          &none  &kt LEFT_SHIFT  &kp LA(LEFT)             &none       &none          &none  &key_repeat        &none  &none
+                               &kp LG(LEFT)          &trans         &none    &vim_backspace      &trans  &kp RG(RIGHT)
             >;
         };
 
