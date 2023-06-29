@@ -345,7 +345,7 @@
 
         combo_sqt {
             bindings = <&kp SEMICOLON>;
-            key-positions = <33 34 35>;
+            key-positions = <33 34 32>;
         };
 
         combo_star {
