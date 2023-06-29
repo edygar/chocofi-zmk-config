@@ -304,7 +304,7 @@
 
         lbracket {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <30 31 20>;
+            key-positions = <31 32>;
         };
 
         lpar {
