@@ -404,10 +404,10 @@
 
         VIM {
             bindings = <
-&none      &none   &vim_word  &kp LA(RIGHT)           &none         &none    &kp K_COPY         &kp K_UNDO   &to 0       &vim_o  &kp K_PASTE  &none
-&none  &kp LCTRL    &kp LALT   &kp LEFT_GUI  &kp LEFT_SHIFT        &vim_g      &kp LEFT           &kp DOWN  &kp UP    &kp RIGHT        &none  &none
-&none      &none  &kp DELETE          &none  &kt LEFT_SHIFT  &kp LA(LEFT)         &none              &none   &none  &key_repeat        &none  &none
-                                     &trans           &to 0         &none        &trans  &kp RA(BACKSPACE)  &trans
+&none      &none   &vim_word  &kp LA(RIGHT)           &none         &none        &kp K_COPY  &kp K_UNDO          &to 0       &vim_o  &kp K_PASTE  &none
+&none  &kp LCTRL    &kp LALT   &kp LEFT_GUI  &kp LEFT_SHIFT        &vim_g          &kp LEFT    &kp DOWN         &kp UP    &kp RIGHT        &none  &none
+&none      &none  &kp DELETE          &none  &kt LEFT_SHIFT  &kp LA(LEFT)             &none       &none          &none  &key_repeat        &none  &none
+                               &kp LG(LEFT)          &trans         &none    &vim_backspace      &trans  &kp RG(RIGHT)
             >;
         };
 
