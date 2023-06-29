@@ -299,12 +299,12 @@
 
         rbracket {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <20 21>;
+            key-positions = <32 33>;
         };
 
         lbracket {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <19 20>;
+            key-positions = <30 31 20>;
         };
 
         lpar {
@@ -334,7 +334,7 @@
 
         combo_sqt {
             bindings = <&kp SEMICOLON>;
-            key-positions = <22 21>;
+            key-positions = <33 34 35>;
         };
 
         combo_star {
