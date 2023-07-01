@@ -92,6 +92,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
+            keep-mods = <()>;
         };
         parenthesis_brackets_right: parenthesis_brackets_right {
             compatible = "zmk,behavior-mod-morph";
@@ -102,6 +103,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
+            keep-mods = <()>;
         };
         slashandbackslash: slashandbackslash {
             compatible = "zmk,behavior-mod-morph";
@@ -112,6 +114,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
+            keep-mods = <()>;
         };
         quote: quote {
             compatible = "zmk,behavior-mod-morph";
@@ -122,6 +125,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
+            keep-mods = <()>;
         };
     };
 
@@ -434,9 +438,9 @@
 
         numpad {
             bindings = <
-&none  &trans  &trans  &trans  &trans  &trans        &kp STAR  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &parenthesis_brackets_left  &none
-&none  &trans  &trans  &trans  &trans  &trans       &kp SLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6       &kp RIGHT_PARENTHESIS  &none
-&none  &trans  &trans  &trans  &trans  &trans    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3                    &kp SEMI  &none
+&none  &trans  &trans  &trans  &trans  &trans        &kp STAR  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &parenthesis_brackets_left  &none
+&none  &trans  &trans  &trans  &trans  &trans       &kp SLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &parenthesis_brackets_right  &none
+&none  &trans  &trans  &trans  &trans  &trans    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3                     &kp SEMI  &none
                        &trans  &trans  &trans          &trans        &trans    &dot_comma
             >;
         };
