@@ -92,7 +92,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
-            keep-mods = <(MOD_LALT)>;
+            keep-mods = <()>;
         };
         parenthesis_brackets_right: parenthesis_brackets_right {
             compatible = "zmk,behavior-mod-morph";
@@ -103,7 +103,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
-            keep-mods = <(MOD_LALT)>;
+            keep-mods = <()>;
         };
         slashandbackslash: slashandbackslash {
             compatible = "zmk,behavior-mod-morph";
@@ -114,7 +114,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
-            keep-mods = <(MOD_LALT)>;
+            keep-mods = <()>;
         };
         quote: quote {
             compatible = "zmk,behavior-mod-morph";
@@ -125,7 +125,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
-            keep-mods = <(MOD_LALT)>;
+            keep-mods = <()>;
         };
     };
 
