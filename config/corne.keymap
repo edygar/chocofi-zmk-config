@@ -108,11 +108,10 @@
             label = "SLASHANDBACKSLASH";
             bindings =
                 <&kp SLASH>,
-                <&kp QUESTION>,
                 <&kp BACKSLASH>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_LALT)>;
+            mods = <(MOD_LALT)>;
         };
     };
 
