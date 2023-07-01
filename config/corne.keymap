@@ -87,8 +87,8 @@
             compatible = "zmk,behavior-mod-morph";
             label = "PARENTHESIS_BRACKETS_LEFT";
             bindings =
-                <&kp LEFT_PARENTHESIS>,
-                <&kp LEFT_BRACKET>;
+                <&kp LEFT_BRACE>,
+                <&kp LEFT_PARENTHESIS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_LALT)>;
@@ -98,10 +98,11 @@
             label = "BRACKET_BRACE_LEFT";
             bindings =
                 <&kp LEFT_BRACKET>,
-                <&kp LEFT_BRACE>;
+                <&parenthesis_brackets_left>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_LSFT)>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <()>;
         };
     };
 
@@ -415,7 +416,7 @@
         numpad {
             bindings = <
 &none  &trans  &trans  &trans  &trans  &trans        &kp STAR  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &parenthesis_brackets_left  &none
-&none  &trans  &trans  &trans  &trans  &trans       &kp SLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6       &kp RIGHT_PARENTHESIS  &none
+&none  &trans  &trans  &trans  &trans  &trans       &kp SLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6           &kp RIGHT_BRACKET  &none
 &none  &trans  &trans  &trans  &trans  &trans    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3                    &kp SEMI  &none
                        &trans  &trans  &trans       &kp EQUAL     &kp MINUS    &dot_comma
             >;
