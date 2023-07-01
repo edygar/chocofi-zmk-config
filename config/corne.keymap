@@ -83,17 +83,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
-        q: q {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Q";
-            bindings =
-                <&kp>,
-                <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-        };
         parenthesis_brackets_left: parenthesis_brackets_left {
             compatible = "zmk,behavior-mod-morph";
             label = "PARENTHESIS_BRACKETS_LEFT";
@@ -385,7 +374,7 @@
         default_layer {
             label = "DEF";
             bindings = <
-&none       &q Q Q       &kp W       &lt 2 E      &lt 1 R      &lt 7 T           &lt 10 Y      &lt 2 U       &lt 1 I       &kp O          &kp P  &none
+&none        &kp Q       &kp W       &lt 2 E      &lt 1 R      &lt 7 T           &lt 10 Y      &lt 2 U       &lt 1 I       &kp O          &kp P  &none
 &none  &hm LCTRL A  &hm LALT S    &hm LGUI D  &hm LSHFT F      &lt 4 G            &lt 5 H  &hm RSHFT J    &hm RGUI K  &hm RALT L  &hm RCTRL SQT  &none
 &none        &kp Z       &kp X         &kp C        &kp V        &kp B            &lt 3 N        &kp M     &kp COMMA     &kp DOT      &kp SLASH  &none
                                 &lt 9 ESCAPE    &lt 5 TAB  &lt 6 SPACE    &lt 6 BACKSPACE  &lt 4 ENTER  &lt 8 DELETE
