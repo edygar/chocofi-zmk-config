@@ -416,6 +416,11 @@
             bindings = <&kp AMPERSAND>;
             key-positions = <30 31>;
         };
+
+        grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <1 2>;
+        };
     };
 
     keymap {
