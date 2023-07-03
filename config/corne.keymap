@@ -517,10 +517,10 @@
 
         FN_R {
             bindings = <
-&none  &trans  &trans  &trans  &trans  &trans     &none  &kp F7  &kp F8  &kp F9     &kp F11    &bt BT_CLR
-&none  &trans  &trans  &trans  &trans  &trans    &trans  &kp F4  &kp F5  &kp F6     &kp F12  &bt BT_SEL 0
-&none  &trans  &trans  &trans  &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp K_LOCK  &bt BT_SEL 1
-                       &trans  &trans  &trans    &trans  &trans  &trans
+&none  &trans  &trans  &trans  &trans  &trans     &sys_reset        &kp F7        &kp F8  &kp F9  &kp F11  &none
+&none  &trans  &trans  &trans  &trans  &trans    &bootloader        &kp F4        &kp F5  &kp F6  &kp F12  &none
+&none  &trans  &trans  &trans  &trans  &trans     &kp K_LOCK        &kp F1        &kp F2  &kp F3    &none  &none
+                       &trans  &trans  &trans     &bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 0
             >;
         };
 
@@ -535,18 +535,18 @@
 
         MEDIA_L {
             bindings = <
-&none  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC   &none    &trans  &trans  &trans  &trans  &trans  &none
-&none  &trans          &kp C_VOL_DN             &kp C_MUTE          &kp C_VOL_UP  &trans    &trans  &trans  &trans  &trans  &trans  &none
-&none  &trans            &kp C_PREV            &kp C_PAUSE            &kp C_NEXT  &trans    &trans  &trans  &trans  &trans  &trans  &none
-                                                    &trans                &trans  &trans    &trans  &trans  &trans
+&none  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC       &none    &trans  &trans  &trans  &trans  &trans  &none
+&none  &trans          &kp C_VOL_DN             &kp C_MUTE          &kp C_VOL_UP      &trans    &trans  &trans  &trans  &trans  &trans  &none
+&none  &trans            &kp C_PREV            &kp C_PAUSE            &kp C_NEXT      &trans    &trans  &trans  &trans  &trans  &trans  &none
+                                              &bt BT_SEL 0          &bt BT_SEL 1  &bt BT_CLR    &trans  &trans  &trans
             >;
         };
 
         FN_L {
             bindings = <
-&none       &trans  &kp F7        &kp F8        &kp F9     &kp F11    &trans  &trans  &trans  &trans  &trans  &none
-&none  &bootloader  &kp F4        &kp F5        &kp F6     &kp F12    &trans  &trans  &trans  &trans  &trans  &none
-&none   &sys_reset  &kp F1        &kp F2        &kp F3  &kp K_LOCK    &trans  &trans  &trans  &trans  &trans  &none
+&none  &bootloader  &kp F7        &kp F8        &kp F9     &kp F11    &trans  &trans  &trans  &trans  &trans  &none
+&none   &sys_reset  &kp F4        &kp F5        &kp F6     &kp F12    &trans  &trans  &trans  &trans  &trans  &none
+&none   &kp K_LOCK  &kp F1        &kp F2        &kp F3       &none    &trans  &trans  &trans  &trans  &trans  &none
                             &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR    &trans  &trans  &trans
             >;
         };
