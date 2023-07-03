@@ -123,26 +123,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
-        layer_left_bracket: layer_left_bracket {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_LEFT_BRACKET";
-            bindings =
-                <&lt>,
-                <&parenthesis_brackets_left>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-        layer_right_bracket: layer_right_bracket {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_RIGHT_BRACKET";
-            bindings =
-                <&lt>,
-                <&parenthesis_brackets_right>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
         coma_semi: coma_semi {
             compatible = "zmk,behavior-mod-morph";
             label = "COMA_SEMI";
@@ -444,10 +424,10 @@
         default_layer {
             label = "DEF";
             bindings = <
-&none     &q_grave       &kp W                &lt 2 E           &lt 1 R      &lt 7 T           &lt 10 Y      &lt 2 U                 &lt 1 I       &kp O                   &kp P  &none
-&none  &hm LCTRL A  &hm LALT S             &hm LGUI D       &hm LSHFT F      &lt 4 G            &lt 5 H  &hm RSHFT J              &hm RGUI K  &hm RALT L  &hm RCTRL SINGLE_QUOTE  &none
-&none        &kp Z       &kp X                  &kp C             &kp V        &kp B            &lt 3 N        &kp M              &coma_semi  &dot_colon      &slashandbackslash  &none
-                                &layer_left_bracket 9  &hm LEFT_GUI TAB  &lt 6 SPACE    &lt 6 BACKSPACE  &lt 4 ENTER  &layer_right_bracket 8
+&none     &q_grave       &kp W                     &lt 2 E           &lt 1 R      &lt 7 T           &lt 10 Y      &lt 2 U                      &lt 1 I       &kp O                   &kp P  &none
+&none  &hm LCTRL A  &hm LALT S                  &hm LGUI D       &hm LSHFT F      &lt 4 G            &lt 5 H  &hm RSHFT J                   &hm RGUI K  &hm RALT L  &hm RCTRL SINGLE_QUOTE  &none
+&none        &kp Z       &kp X                       &kp C             &kp V        &kp B            &lt 3 N        &kp M                   &coma_semi  &dot_colon      &slashandbackslash  &none
+                                &parenthesis_brackets_left  &hm LEFT_GUI TAB  &lt 6 SPACE    &lt 6 BACKSPACE  &lt 4 ENTER  &parenthesis_brackets_right
             >;
         };
 
@@ -484,19 +464,19 @@
 
         numpad {
             bindings = <
-&none  &trans  &trans  &trans  &trans  &trans        &kp STAR  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &parenthesis_brackets_left  &none
-&none  &trans  &trans  &trans  &trans  &trans       &kp SLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &parenthesis_brackets_right  &none
-&none  &trans  &trans  &trans  &trans  &trans    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3                     &kp SEMI  &none
+&none  &trans  &trans  &trans  &trans  &trans        &kp STAR  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp PLUS  &none
+&none  &trans  &trans  &trans  &trans  &trans       &kp SLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp GRAVE  &none
+&none  &trans  &trans  &trans  &trans  &trans    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp SEMI  &none
                        &trans  &trans  &trans          &trans        &trans    &dot_comma
             >;
         };
 
         symbols {
             bindings = <
-&none  &kp EXCLAMATION    &kp AT_SIGN          &kp HASH            &kp DOLLAR            &kp PERCENT    &trans  &trans  &trans  &trans  &trans  &none
-&none        &kp CARET  &kp AMPERSAND      &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &trans  &trans  &trans  &trans  &trans  &none
-&none        &kp MINUS      &kp EQUAL  &kp LS(NUMBER_2)      &kp LEFT_BRACKET               &kp RBKT    &trans  &trans  &trans  &trans  &trans  &none
-                                                 &trans                &trans                 &trans    &trans  &trans  &trans
+&none  &kp EXCLAMATION    &kp AT_SIGN              &kp HASH            &kp DOLLAR            &kp PERCENT    &trans  &trans  &trans  &trans  &trans  &none
+&none        &kp CARET  &kp AMPERSAND          &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &trans  &trans  &trans  &trans  &trans  &none
+&none        &kp MINUS      &kp EQUAL  &kp LS(LA(NUMBER_2))      &kp LEFT_BRACKET               &kp RBKT    &trans  &trans  &trans  &trans  &trans  &none
+                                                     &trans                &trans                 &trans    &trans  &trans  &trans
             >;
 
             label = "symbols";
