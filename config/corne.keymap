@@ -167,6 +167,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
+        dot_colon: dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_COLON";
+            bindings =
+                <&kp PERIOD>,
+                <&kp COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
     };
 
     macros {
@@ -440,7 +450,7 @@
             bindings = <
 &none        &kp Q       &kp W                          &lt 2 E           &lt 1 R      &lt 7 T           &lt 10 Y      &lt 2 U                           &lt 1 I       &kp O                              &kp P  &none
 &none  &hm LCTRL A  &hm LALT S                       &hm LGUI D       &hm LSHFT F      &lt 4 G            &lt 5 H  &hm RSHFT J                        &hm RGUI K  &hm RALT L  &hm_quote RIGHT_CONTROL undefined  &none
-&none        &kp Z       &kp X                            &kp C             &kp V        &kp B            &lt 3 N        &kp M                        &coma_semi     &kp DOT                 &slashandbackslash  &none
+&none        &kp Z       &kp X                            &kp C             &kp V        &kp B            &lt 3 N        &kp M                        &coma_semi  &dot_colon                 &slashandbackslash  &none
                                 &layer_left_bracket 9 undefined  &hm LEFT_GUI TAB  &lt 6 SPACE    &lt 6 BACKSPACE  &lt 4 ENTER  &layer_right_bracket 8 undefined
             >;
         };
