@@ -143,16 +143,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-        hm_quote: hm_quote {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HM_QUOTE";
-            bindings =
-                <&kp>,
-                <&quote>;
-
-            #binding-cells = <1>;
-            tapping-term-ms = <200>;
-        };
         coma_semi: coma_semi {
             compatible = "zmk,behavior-mod-morph";
             label = "COMA_SEMI";
@@ -454,7 +444,7 @@
         default_layer {
             label = "DEF";
             bindings = <
-&none        &kp Q       &kp W                &lt 2 E           &lt 1 R      &lt 7 T           &lt 10 Y      &lt 2 U                 &lt 1 I       &kp O                   &kp P  &none
+&none     &q_grave       &kp W                &lt 2 E           &lt 1 R      &lt 7 T           &lt 10 Y      &lt 2 U                 &lt 1 I       &kp O                   &kp P  &none
 &none  &hm LCTRL A  &hm LALT S             &hm LGUI D       &hm LSHFT F      &lt 4 G            &lt 5 H  &hm RSHFT J              &hm RGUI K  &hm RALT L  &hm RCTRL SINGLE_QUOTE  &none
 &none        &kp Z       &kp X                  &kp C             &kp V        &kp B            &lt 3 N        &kp M              &coma_semi  &dot_colon      &slashandbackslash  &none
                                 &layer_left_bracket 9  &hm LEFT_GUI TAB  &lt 6 SPACE    &lt 6 BACKSPACE  &lt 4 ENTER  &layer_right_bracket 8
