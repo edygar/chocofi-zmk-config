@@ -91,7 +91,7 @@
                 <&kp LEFT_PARENTHESIS>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
         parenthesis_brackets_right: parenthesis_brackets_right {
             compatible = "zmk,behavior-mod-morph";
@@ -101,7 +101,7 @@
                 <&kp RIGHT_PARENTHESIS>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
         slashandbackslash: slashandbackslash {
             compatible = "zmk,behavior-mod-morph";
