@@ -48,7 +48,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_O";
             bindings =
-                <&kp ENTER>,
+                <&kp LS(ENTER)>,
                 <&vim_O>;
 
             #binding-cells = <0>;
@@ -270,7 +270,7 @@
             compatible = "zmk,behavior-macro";
             label = "VIM_O";
             #binding-cells = <0>;
-            bindings = <&kp LG(LEFT) &kp ENTER &kp LEFT>;
+            bindings = <&kp LG(LEFT) &kp LS(ENTER) &kp LEFT>;
         };
         vim_dw: vim_dw {
             compatible = "zmk,behavior-macro";
@@ -504,10 +504,10 @@
 
         VIM {
             bindings = <
-&none      &none   &vim_word  &kp LA(RIGHT)           &none         &none        &kp K_COPY  &kp K_UNDO          &to 0       &vim_o  &kp K_PASTE  &none
-&none  &kp LCTRL    &kp LALT   &kp LEFT_GUI  &kp LEFT_SHIFT        &vim_g          &kp LEFT    &kp DOWN         &kp UP    &kp RIGHT        &none  &none
-&none      &none  &kp DELETE          &none  &kt LEFT_SHIFT  &kp LA(LEFT)             &none       &none          &none  &key_repeat        &none  &none
-                               &kp LG(LEFT)          &trans         &none    &vim_backspace      &trans  &kp RG(RIGHT)
+&none      &none   &vim_word  &kp LA(RIGHT)           &none         &none        &kp K_COPY            &kp K_UNDO                   &to 0               &vim_o  &kp K_PASTE  &none
+&none  &kp LCTRL    &kp LALT   &kp LEFT_GUI  &kp LEFT_SHIFT        &vim_g          &kp LEFT  &hm RIGHT_SHIFT DOWN  &hm RIGHT_GUI UP_ARROW  &hm RIGHT_ALT RIGHT        &none  &none
+&none      &none  &kp DELETE          &none  &kt LEFT_SHIFT  &kp LA(LEFT)             &none                 &none                   &none          &key_repeat        &none  &none
+                               &kp LG(LEFT)          &trans         &none    &vim_backspace                &trans           &kp RG(RIGHT)
             >;
         };
 
