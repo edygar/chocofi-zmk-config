@@ -367,26 +367,6 @@
             key-positions = <15 20>;
         };
 
-        rbracket {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <32 33>;
-        };
-
-        lbracket {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <31 32>;
-        };
-
-        lpar {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <7 6>;
-        };
-
-        rpart {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <8 7>;
-        };
-
         eq {
             bindings = <&kp EQUAL>;
             key-positions = <10 9>;
@@ -409,7 +389,7 @@
 
         combo_star {
             bindings = <&kp STAR>;
-            key-positions = <6 7 8>;
+            key-positions = <6 7>;
         };
 
         combo_ampersand {
@@ -420,6 +400,11 @@
         grave {
             bindings = <&kp GRAVE>;
             key-positions = <1 2>;
+        };
+
+        math_slash {
+            bindings = <&kp SLASH>;
+            key-positions = <7 8>;
         };
     };
 
@@ -469,10 +454,10 @@
 
         numpad {
             bindings = <
-&none  &trans  &trans  &trans  &trans  &trans        &kp STAR  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp PLUS  &none
-&none  &trans  &trans  &trans  &trans  &trans       &kp SLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp GRAVE  &none
-&none  &trans  &trans  &trans  &trans  &trans    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp SEMI  &none
-                       &trans  &trans  &trans          &trans        &trans    &dot_comma
+&none  &trans  &trans  &trans  &trans  &trans    &kp LEFT_PARENTHESIS  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RIGHT_PARENTHESIS  &none
+&none  &trans  &trans  &trans  &trans  &trans               &kp SLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6              &kp GRAVE  &none
+&none  &trans  &trans  &trans  &trans  &trans            &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3               &kp SEMI  &none
+                       &trans  &trans  &trans                  &trans        &trans    &dot_comma
             >;
         };
 
