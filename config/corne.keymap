@@ -153,6 +153,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
         hm_a: hm_a {
             compatible = "zmk,behavior-tap-dance";
             label = "HM_A";
@@ -161,6 +162,64 @@
                 <&hm LCTRL A>,
                 <&kp A>;
         };
+        hm_s: hm_s {
+            compatible = "zmk,behavior-tap-dance";
+            label = "HM_S";
+            #binding-cells = <0>;
+            bindings =
+                <&hm LALT S>,
+                <&kp S>;
+        };
+        hm_d: hm_d {
+            compatible = "zmk,behavior-tap-dance";
+            label = "HM_D";
+            #binding-cells = <0>;
+            bindings =
+                <&hm LGUI D>,
+                <&kp D>;
+        };
+        hm_f: hm_f {
+            compatible = "zmk,behavior-tap-dance";
+            label = "HM_F";
+            #binding-cells = <0>;
+            bindings =
+                <&hm LEFT_SHIFT F>,
+                <&kp F>;
+        };
+
+        hm_quote: hm_quote {
+            compatible = "zmk,behavior-tap-dance";
+            label = "HM_QUOTE";
+            #binding-cells = <0>;
+            bindings =
+                <&hm RCTRL SINGLE_QUOTE>,
+                <&kp SINGLE_QUOTE>;
+        };
+        hm_l: hm_l {
+            compatible = "zmk,behavior-tap-dance";
+            label = "HM_L";
+            #binding-cells = <0>;
+            bindings =
+                <&hm RALT L>,
+                <&kp L>;
+        };
+        hm_k: hm_k {
+            compatible = "zmk,behavior-tap-dance";
+            label = "HM_K";
+            #binding-cells = <0>;
+            bindings =
+                <&hm RGUI K>,
+                <&kp K>;
+        };
+        hm_j: hm_j {
+            compatible = "zmk,behavior-tap-dance";
+            label = "HM_J";
+            #binding-cells = <0>;
+            bindings =
+                <&hm RIGHT_SHIFT J>,
+                <&kp J>;
+        };
+
     };
 
     macros {
@@ -312,7 +371,7 @@
             label = "DEF";
             bindings = <
 &none  &q_grave       &kp W             &lt 2 E           &lt 1 R      &lt 6 T            &lt 9 Y      &lt 2 U              &lt 1 I       &kp O                   &kp P  &none
-&none     &hm_a  &hm LALT S          &hm LGUI D       &hm LSHFT F      &lt 4 G            &lt 4 H  &hm RSHFT J           &hm RGUI K  &hm RALT L  &hm RCTRL SINGLE_QUOTE  &none
+&none     &hm_a       &hm_s               &hm_d             &hm_f      &lt 4 G            &lt 4 H        &hm_j                &hm_k       &hm_l               &hm_quote  &none
 &none     &kp Z       &kp X               &kp C             &kp V      &lt 7 B            &lt 3 N        &kp M           &coma_semi  &dot_colon      &slashandbackslash  &none
                              &lt 8 LEFT_BRACKET  &hm LEFT_GUI TAB  &lt 5 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER  &lt 6 RIGHT_BRACKET
             >;
