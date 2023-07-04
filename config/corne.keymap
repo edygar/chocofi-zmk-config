@@ -358,7 +358,7 @@
         };
 
         toggle_shift {
-            bindings = <&kp CAPSLOCK>;
+            bindings = <&caps_word>;
             key-positions = <16 19>;
         };
 
@@ -367,44 +367,14 @@
             key-positions = <15 20>;
         };
 
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <10 9>;
-        };
-
-        minus {
-            bindings = <&kp MINUS>;
-            key-positions = <9 8>;
-        };
-
-        combo_slsh {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <34 33>;
-        };
-
-        combo_sqt {
-            bindings = <&kp SEMICOLON>;
-            key-positions = <33 34 32>;
-        };
-
-        combo_star {
-            bindings = <&kp STAR>;
-            key-positions = <6 7>;
-        };
-
-        combo_ampersand {
-            bindings = <&kp AMPERSAND>;
-            key-positions = <30 31>;
-        };
-
-        grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <1 2>;
-        };
-
         math_slash {
             bindings = <&kp SLASH>;
             key-positions = <7 8>;
+        };
+
+        VIM_OUT_2 {
+            bindings = <&esc_0>;
+            key-positions = <17 18>;
         };
     };
 
@@ -463,10 +433,10 @@
 
         symbols {
             bindings = <
-&none  &kp EXCLAMATION    &kp AT_SIGN              &kp HASH            &kp DOLLAR            &kp PERCENT    &kp LEFT_PARENTHESIS  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RIGHT_PARENTHESIS  &none
-&none        &kp CARET  &kp AMPERSAND          &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                &kp PIPE  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6              &kp GRAVE  &none
-&none        &kp MINUS      &kp EQUAL  &kp LS(LA(NUMBER_2))      &kp LEFT_BRACKET               &kp RBKT            &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3               &kp SEMI  &none
-                                                     &trans                &trans                 &trans                  &trans        &trans    &dot_comma
+    &none  &kp EXCLAMATION  &kp AT_SIGN       &kp HASH    &kp DOLLAR           &kp PERCENT              &kp PERCENT   &kp LEFT_PARENTHESIS  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RIGHT_PARENTHESIS
+    &none            &none    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_PARENTHESIS      &kp PIPE  &kp NUMBER_4  &kp NUMBER_5           &kp NUMBER_6
+&kp GRAVE            &none        &none      &kp MINUS     &kp EQUAL  &kp LS(LA(NUMBER_2))         &kp LEFT_BRACKET               &kp RBKT      &kp RBKT  &kp NUMBER_0  &kp NUMBER_1           &kp NUMBER_2
+                                          &kp NUMBER_3      &kp SEMI                 &none                   &trans                 &trans        &trans
             >;
 
             label = "symbols";
