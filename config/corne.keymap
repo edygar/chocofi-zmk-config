@@ -83,26 +83,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
-        parenthesis_brackets_left: parenthesis_brackets_left {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PARENTHESIS_BRACKETS_LEFT";
-            bindings =
-                <&kp LEFT_BRACKET>,
-                <&kp LEFT_PARENTHESIS>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
-        };
-        parenthesis_brackets_right: parenthesis_brackets_right {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PARENTHESIS_BRACKETS_RIGHT";
-            bindings =
-                <&kp RIGHT_BRACKET>,
-                <&kp RIGHT_PARENTHESIS>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
-        };
         slashandbackslash: slashandbackslash {
             compatible = "zmk,behavior-mod-morph";
             label = "SLASHANDBACKSLASH";
@@ -379,10 +359,10 @@
         default_layer {
             label = "DEF";
             bindings = <
-&none     &q_grave       &kp W                     &lt 2 E           &lt 1 R      &lt 6 T            &lt 9 Y      &lt 2 U                      &lt 1 I       &kp O                   &kp P  &none
-&none  &hm LCTRL A  &hm LALT S                  &hm LGUI D       &hm LSHFT F      &lt 4 G            &lt 4 H  &hm RSHFT J                   &hm RGUI K  &hm RALT L  &hm RCTRL SINGLE_QUOTE  &none
-&none        &kp Z       &kp X                       &kp C             &kp V        &kp B            &lt 3 N        &kp M                   &coma_semi  &dot_colon      &slashandbackslash  &none
-                                &parenthesis_brackets_left  &hm LEFT_GUI TAB  &lt 5 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER  &parenthesis_brackets_right
+&none     &q_grave       &kp W             &lt 2 E           &lt 1 R      &lt 6 T            &lt 9 Y      &lt 2 U              &lt 1 I       &kp O                   &kp P  &none
+&none  &hm LCTRL A  &hm LALT S          &hm LGUI D       &hm LSHFT F      &lt 4 G            &lt 4 H  &hm RSHFT J           &hm RGUI K  &hm RALT L  &hm RCTRL SINGLE_QUOTE  &none
+&none        &kp Z       &kp X               &kp C             &kp V      &lt 7 B            &lt 3 N        &kp M           &coma_semi  &dot_colon      &slashandbackslash  &none
+                                &lt 8 LEFT_BRACKET  &hm LEFT_GUI TAB  &lt 5 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER  &lt 6 RIGHT_BRACKET
             >;
         };
 
@@ -419,10 +399,10 @@
 
         numpad_sym {
             bindings = <
-&none  &kp EXCLAMATION              &kp CARET       &kp DOLLAR              &kp LEFT_BRACE          &kp RIGHT_BRACE    &kp ASTERISK             &kp NUMBER_7            &kp NUMBER_8            &kp NUMBER_9         &kp PLUS  &none
-&none     &hm LCTRL AT     &hm LALT AMPERSAND    &hm LGUI PIPE  &hm LSHFT LEFT_PARENTHESIS  &lt 4 RIGHT_PARENTHESIS       &kp SLASH  &hm LEFT_SHIFT NUMBER_4  &hm RIGHT_GUI NUMBER_5  &hm RIGHT_ALT NUMBER_6  &hm RCTRL MINUS  &none
-&none      &kp PERCENT               &kp HASH     &kp ASTERISK            &kp LEFT_BRACKET                 &kp RBKT    &kp NUMBER_0             &kp NUMBER_1            &kp NUMBER_2            &kp NUMBER_3        &kp EQUAL  &none
-                                                     &kp GRAVE               &kp SEMICOLON                   &trans          &trans                   &trans          &kp UNDERSCORE
+&none  &kp EXCLAMATION           &kp CARET     &kp DOLLAR              &kp LEFT_BRACE          &kp RIGHT_BRACE    &kp ASTERISK              &kp NUMBER_7            &kp NUMBER_8            &kp NUMBER_9         &kp PLUS  &none
+&none     &hm LCTRL AT  &hm LALT AMPERSAND  &hm LGUI PIPE  &hm LSHFT LEFT_PARENTHESIS  &lt 4 RIGHT_PARENTHESIS       &kp SLASH  &hm RIGHT_SHIFT NUMBER_4  &hm RIGHT_GUI NUMBER_5  &hm RIGHT_ALT NUMBER_6  &hm RCTRL MINUS  &none
+&none      &kp PERCENT            &kp HASH   &kp ASTERISK            &kp LEFT_BRACKET                 &kp RBKT    &kp NUMBER_0              &kp NUMBER_1            &kp NUMBER_2            &kp NUMBER_3        &kp EQUAL  &none
+                                                &kp GRAVE               &kp SEMICOLON                   &trans          &trans                    &trans          &kp UNDERSCORE
             >;
         };
 
@@ -431,7 +411,7 @@
 &none           &none   &vim_word  &kp LA(RIGHT)           &none         &none        &kp K_COPY            &kp K_UNDO                   &to 0               &vim_o  &kp K_PASTE  &none
 &none       &kp LCTRL    &kp LALT   &kp LEFT_GUI  &kp LEFT_SHIFT        &vim_g          &kp LEFT  &hm RIGHT_SHIFT DOWN  &hm RIGHT_GUI UP_ARROW  &hm RIGHT_ALT RIGHT        &none  &none
 &none  &kp LEFT_SHIFT  &kp DELETE          &none  &kt LEFT_SHIFT  &kp LA(LEFT)             &none                 &none                   &none          &key_repeat        &none  &none
-                                    &kp LG(LEFT)          &trans         &none    &vim_backspace                &trans           &kp RG(RIGHT)
+                                    &kp LG(LEFT)          &trans        &trans    &vim_backspace                &trans           &kp RG(RIGHT)
             >;
         };
 
