@@ -153,6 +153,14 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+        hm_a: hm_a {
+            compatible = "zmk,behavior-tap-dance";
+            label = "HM_A";
+            #binding-cells = <0>;
+            bindings =
+                <&hm LCTRL A>,
+                <&kp A>;
+        };
     };
 
     macros {
@@ -303,10 +311,10 @@
         default_layer {
             label = "DEF";
             bindings = <
-&none     &q_grave       &kp W             &lt 2 E           &lt 1 R      &lt 6 T            &lt 9 Y      &lt 2 U              &lt 1 I       &kp O                   &kp P  &none
-&none  &hm LCTRL A  &hm LALT S          &hm LGUI D       &hm LSHFT F      &lt 4 G            &lt 4 H  &hm RSHFT J           &hm RGUI K  &hm RALT L  &hm RCTRL SINGLE_QUOTE  &none
-&none        &kp Z       &kp X               &kp C             &kp V      &lt 7 B            &lt 3 N        &kp M           &coma_semi  &dot_colon      &slashandbackslash  &none
-                                &lt 8 LEFT_BRACKET  &hm LEFT_GUI TAB  &lt 5 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER  &lt 6 RIGHT_BRACKET
+&none  &q_grave       &kp W             &lt 2 E           &lt 1 R      &lt 6 T            &lt 9 Y      &lt 2 U              &lt 1 I       &kp O                   &kp P  &none
+&none     &hm_a  &hm LALT S          &hm LGUI D       &hm LSHFT F      &lt 4 G            &lt 4 H  &hm RSHFT J           &hm RGUI K  &hm RALT L  &hm RCTRL SINGLE_QUOTE  &none
+&none     &kp Z       &kp X               &kp C             &kp V      &lt 7 B            &lt 3 N        &kp M           &coma_semi  &dot_colon      &slashandbackslash  &none
+                             &lt 8 LEFT_BRACKET  &hm LEFT_GUI TAB  &lt 5 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER  &lt 6 RIGHT_BRACKET
             >;
         };
 
