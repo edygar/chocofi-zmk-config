@@ -304,7 +304,7 @@
             label = "DEF";
             bindings = <
 &none     &q_grave           &kp W             &lt 2 E           &lt 1 R      &lt 6 T            &lt 9 Y            &lt 2 U              &lt 1 I                &kp O               &kp P  &none
-&none  &hm A LCTRL  &hm LEFT_ALT S      &hm LEFT_GUI D  &hm LEFT_SHIFT F      &lt 4 G            &lt 4 H  &hm RIGHT_SHIFT J       &hm LEFT_GUI K  &hm RG(RIGHT_ALT) L       &hm RCTRL SQT  &none
+&none  &hm LCTRL A  &hm LEFT_ALT S      &hm LEFT_GUI D  &hm LEFT_SHIFT F      &lt 4 G            &lt 4 H  &hm RIGHT_SHIFT J       &hm LEFT_GUI K  &hm RG(RIGHT_ALT) L       &hm RCTRL SQT  &none
 &none        &kp Z           &kp X               &kp C             &kp V      &lt 7 B            &lt 3 N              &kp M           &coma_semi           &dot_colon  &slashandbackslash  &none
                                     &lt 8 LEFT_BRACKET  &hm LEFT_GUI TAB  &lt 5 SPACE    &lt 5 BACKSPACE        &lt 4 ENTER  &lt 6 RIGHT_BRACKET
             >;
