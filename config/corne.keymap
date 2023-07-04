@@ -44,11 +44,11 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
-        vim_o: vim_o {
+        vim_oO: vim_oO {
             compatible = "zmk,behavior-mod-morph";
-            label = "VIM_O";
+            label = "VIM_OO";
             bindings =
-                <&kp LS(ENTER)>,
+                <&vim_o>,
                 <&vim_O>;
 
             #binding-cells = <0>;
@@ -132,6 +132,26 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
+        };
+        home: home {
+            compatible = "zmk,behavior-mod-morph";
+            label = "HOME";
+            bindings =
+                <&kp LG(LEFT)>,
+                <&kp HOME>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+        end: end {
+            compatible = "zmk,behavior-mod-morph";
+            label = "END";
+            bindings =
+                <&kp LG(RIGHT)>,
+                <&kp END>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
@@ -250,6 +270,12 @@
             #binding-cells = <0>;
             bindings = <&to 0 &kp ESCAPE>;
         };
+        vim_o: vim_o {
+            compatible = "zmk,behavior-macro";
+            label = "VIM_O";
+            #binding-cells = <0>;
+            bindings = <&kp LG(RIGHT) &kp ENTER>;
+        };
     };
 
     combos {
@@ -334,7 +360,7 @@
 &none           &none   &vim_word  &kp LA(RIGHT)   &kp LS(LG(Z))         &none        &kp K_COPY             &kp LG(Z)                   &to 0               &vim_o  &kp K_PASTE  &none
 &none       &kp LCTRL    &kp LALT   &kp LEFT_GUI  &kp LEFT_SHIFT        &vim_g          &kp LEFT  &hm RIGHT_SHIFT DOWN  &hm RIGHT_GUI UP_ARROW  &hm RIGHT_ALT RIGHT        &none  &none
 &none  &kp LEFT_SHIFT  &kp DELETE          &none  &kt LEFT_SHIFT  &kp LA(LEFT)             &none                 &none                   &none          &key_repeat        &none  &none
-                                    &kp LG(LEFT)          &trans        &trans    &vim_backspace                &trans           &kp RG(RIGHT)
+                                    &kp LG(LEFT)          &trans        &trans    &vim_backspace                &trans                    &end
             >;
         };
 
