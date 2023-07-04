@@ -281,11 +281,6 @@
     combos {
         compatible = "zmk,combos";
 
-        VIM_IN {
-            bindings = <&to 5>;
-            key-positions = <17 18>;
-        };
-
         RESET {
             bindings = <&esc_0>;
             key-positions = <15 20>;
