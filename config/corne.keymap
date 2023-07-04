@@ -17,7 +17,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings =
@@ -161,7 +161,7 @@
                 <&hm LCTRL A>,
                 <&kp A>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
         };
         hm_s: hm_s {
             compatible = "zmk,behavior-tap-dance";
@@ -171,7 +171,7 @@
                 <&hm LALT S>,
                 <&kp S>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
         };
         hm_d: hm_d {
             compatible = "zmk,behavior-tap-dance";
@@ -181,7 +181,7 @@
                 <&hm LGUI D>,
                 <&kp D>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
         };
         hm_f: hm_f {
             compatible = "zmk,behavior-tap-dance";
@@ -191,7 +191,7 @@
                 <&hm LEFT_SHIFT F>,
                 <&kp F>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
         };
         hm_quote: hm_quote {
             compatible = "zmk,behavior-tap-dance";
@@ -201,7 +201,7 @@
                 <&hm RCTRL SINGLE_QUOTE>,
                 <&kp SINGLE_QUOTE>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
         };
         hm_l: hm_l {
             compatible = "zmk,behavior-tap-dance";
@@ -211,7 +211,7 @@
                 <&hm RALT L>,
                 <&kp L>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
         };
         hm_k: hm_k {
             compatible = "zmk,behavior-tap-dance";
@@ -221,7 +221,7 @@
                 <&hm RGUI K>,
                 <&kp K>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
         };
         hm_j: hm_j {
             compatible = "zmk,behavior-tap-dance";
@@ -231,7 +231,7 @@
                 <&hm RIGHT_SHIFT J>,
                 <&kp J>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
         };
     };
 
