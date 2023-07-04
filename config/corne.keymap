@@ -342,11 +342,6 @@
             key-positions = <16 19>;
         };
 
-        cmd_esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <15 20>;
-        };
-
         VIM_OUT_2 {
             bindings = <&esc_0>;
             key-positions = <17 18>;
