@@ -153,86 +153,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
-        hm_a: hm_a {
-            compatible = "zmk,behavior-tap-dance";
-            label = "HM_A";
-            #binding-cells = <0>;
-            bindings =
-                <&hm LCTRL A>,
-                <&kp A>;
-
-            tapping-term-ms = <300>;
-        };
-        hm_s: hm_s {
-            compatible = "zmk,behavior-tap-dance";
-            label = "HM_S";
-            #binding-cells = <0>;
-            bindings =
-                <&hm LALT S>,
-                <&kp S>;
-
-            tapping-term-ms = <100>;
-        };
-        hm_d: hm_d {
-            compatible = "zmk,behavior-tap-dance";
-            label = "HM_D";
-            #binding-cells = <0>;
-            bindings =
-                <&hm LGUI D>,
-                <&kp D>;
-
-            tapping-term-ms = <300>;
-        };
-        hm_f: hm_f {
-            compatible = "zmk,behavior-tap-dance";
-            label = "HM_F";
-            #binding-cells = <0>;
-            bindings =
-                <&hm LEFT_SHIFT F>,
-                <&kp F>;
-
-            tapping-term-ms = <300>;
-        };
-        hm_quote: hm_quote {
-            compatible = "zmk,behavior-tap-dance";
-            label = "HM_QUOTE";
-            #binding-cells = <0>;
-            bindings =
-                <&hm RCTRL SINGLE_QUOTE>,
-                <&kp SINGLE_QUOTE>;
-
-            tapping-term-ms = <300>;
-        };
-        hm_l: hm_l {
-            compatible = "zmk,behavior-tap-dance";
-            label = "HM_L";
-            #binding-cells = <0>;
-            bindings =
-                <&hm RALT L>,
-                <&kp L>;
-
-            tapping-term-ms = <300>;
-        };
-        hm_k: hm_k {
-            compatible = "zmk,behavior-tap-dance";
-            label = "HM_K";
-            #binding-cells = <0>;
-            bindings =
-                <&hm RGUI K>,
-                <&kp K>;
-
-            tapping-term-ms = <300>;
-        };
-        hm_j: hm_j {
-            compatible = "zmk,behavior-tap-dance";
-            label = "HM_J";
-            #binding-cells = <0>;
-            bindings =
-                <&hm RIGHT_SHIFT J>,
-                <&kp J>;
-
-            tapping-term-ms = <300>;
-        };
     };
 
     macros {
@@ -383,10 +303,10 @@
         default_layer {
             label = "DEF";
             bindings = <
-&none  &q_grave  &kp W             &lt 2 E           &lt 1 R      &lt 6 T            &lt 9 Y      &lt 2 U              &lt 1 I       &kp O               &kp P  &none
-&none     &hm_a  &hm_s               &hm_d             &hm_f      &lt 4 G            &lt 4 H        &hm_j                &hm_k       &hm_l           &hm_quote  &none
-&none     &kp Z  &kp X               &kp C             &kp V      &lt 7 B            &lt 3 N        &kp M           &coma_semi  &dot_colon  &slashandbackslash  &none
-                        &lt 8 LEFT_BRACKET  &hm LEFT_GUI TAB  &lt 5 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER  &lt 6 RIGHT_BRACKET
+&none     &q_grave           &kp W             &lt 2 E           &lt 1 R      &lt 6 T            &lt 9 Y            &lt 2 U              &lt 1 I                &kp O               &kp P  &none
+&none  &hm A LCTRL  &hm LEFT_ALT S      &hm LEFT_GUI D  &hm LEFT_SHIFT F      &lt 4 G            &lt 4 H  &hm RIGHT_SHIFT J       &hm LEFT_GUI K  &hm RG(RIGHT_ALT) L       &hm RCTRL SQT  &none
+&none        &kp Z           &kp X               &kp C             &kp V      &lt 7 B            &lt 3 N              &kp M           &coma_semi           &dot_colon  &slashandbackslash  &none
+                                    &lt 8 LEFT_BRACKET  &hm LEFT_GUI TAB  &lt 5 SPACE    &lt 5 BACKSPACE        &lt 4 ENTER  &lt 6 RIGHT_BRACKET
             >;
         };
 
