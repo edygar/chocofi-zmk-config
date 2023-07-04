@@ -419,10 +419,10 @@
 
         numpad_sym {
             bindings = <
-&none  &kp EXCLAMATION      &kp CARET    &kp DOLLAR        &kp LEFT_BRACE        &kp RIGHT_BRACE    &kp ASTERISK  &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9   &kp PLUS  &none
-&none           &kp AT  &kp AMPERSAND      &kp PIPE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS       &kp SLASH  &kp NUMBER_4    &kp NUMBER_5  &kp NUMBER_6  &kp MINUS  &none
-&none      &kp PERCENT       &kp HASH  &kp ASTERISK      &kp LEFT_BRACKET               &kp RBKT    &kp NUMBER_0  &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &none
-                                          &kp GRAVE                &trans                 &trans          &trans        &trans  &kp UNDERSCORE
+&none  &kp EXCLAMATION      &kp CARET    &kp DOLLAR        &kp LEFT_BRACE        &kp RIGHT_BRACE    &kp ASTERISK             &kp NUMBER_7            &kp NUMBER_8            &kp NUMBER_9         &kp PLUS  &none
+&none           &kp AT  &kp AMPERSAND      &kp PIPE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS       &kp SLASH  &hm LEFT_SHIFT NUMBER_4  &hm RIGHT_GUI NUMBER_5  &hm RIGHT_ALT NUMBER_6  &hm RCTRL MINUS  &none
+&none      &kp PERCENT       &kp HASH  &kp ASTERISK      &kp LEFT_BRACKET               &kp RBKT    &kp NUMBER_0             &kp NUMBER_1            &kp NUMBER_2            &kp NUMBER_3        &kp EQUAL  &none
+                                          &kp GRAVE         &kp SEMICOLON                 &trans          &trans                   &trans          &kp UNDERSCORE
             >;
         };
 
