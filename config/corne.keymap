@@ -232,71 +232,11 @@
             #binding-cells = <0>;
             bindings = <&kp LG(LEFT) &kp LS(ENTER) &kp LEFT>;
         };
-        vim_dw: vim_dw {
-            compatible = "zmk,behavior-macro";
-            label = "VIM_DW";
-            #binding-cells = <0>;
-            bindings = <&vim_word &kp LA(BACKSPACE) &kp DELETE>;
-        };
         vim_I: vim_I {
             compatible = "zmk,behavior-macro";
             label = "VIM_I";
             #binding-cells = <0>;
             bindings = <&kp LG(LEFT_ARROW) &to 0>;
-        };
-        vim_dd: vim_dd {
-            compatible = "zmk,behavior-macro";
-            label = "VIM_DD";
-            #binding-cells = <0>;
-            bindings = <&kp LG(RIGHT) &kp LG(BACKSPACE)>;
-        };
-        vim_dk: vim_dk {
-            compatible = "zmk,behavior-macro";
-            label = "VIM_DK";
-            #binding-cells = <0>;
-            bindings = <&vim_dd &kp UP_ARROW &vim_dd>;
-        };
-        vim_dj: vim_dj {
-            compatible = "zmk,behavior-macro";
-            label = "VIM_DJ";
-            #binding-cells = <0>;
-            bindings = <&vim_dd &vim_dd>;
-        };
-        vim_cw: vim_cw {
-            compatible = "zmk,behavior-macro";
-            label = "VIM_CW";
-            #binding-cells = <0>;
-            bindings = <&vim_dw &to 0>;
-        };
-        vim_cc: vim_cc {
-            compatible = "zmk,behavior-macro";
-            label = "VIM_CC";
-            #binding-cells = <0>;
-            bindings = <&vim_dd &to 0>;
-        };
-        vim_ck: vim_ck {
-            compatible = "zmk,behavior-macro";
-            label = "VIM_CK";
-            #binding-cells = <0>;
-            bindings = <&vim_dk &to 0>;
-        };
-        vim_cj: vim_cj {
-            compatible = "zmk,behavior-macro";
-            label = "VIM_CJ";
-            #binding-cells = <0>;
-            bindings = <&vim_dj &to 0>;
-        };
-        vim_ch: vim_ch {
-            compatible = "zmk,behavior-macro";
-            label = "VIM_CH";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE &to 0>;
-        };
-        vim_cl: vim_cl {
-            compatible = "zmk,behavior-macro";
-            label = "VIM_CL";
-            #binding-cells = <0>;
-            bindings = <&kp DELETE &to 0>;
         };
         aes: aes {
             compatible = "zmk,behavior-macro";
@@ -304,23 +244,11 @@
             #binding-cells = <0>;
             bindings = <&kp LA(E) &kp A &kp E &kp S>;
         };
-        vim_ce: vim_ce {
-            compatible = "zmk,behavior-macro";
-            label = "VIM_CE";
-            #binding-cells = <0>;
-            bindings = <&kp LA(DELETE) &to 0>;
-        };
-        vim_cb: vim_cb {
-            compatible = "zmk,behavior-macro";
-            label = "VIM_CB";
-            #binding-cells = <0>;
-            bindings = <&kp LA(BACKSPACE) &to 0>;
-        };
         esc_0: esc_0 {
             compatible = "zmk,behavior-macro";
             label = "ESC_0";
             #binding-cells = <0>;
-            bindings = <&kp ESCAPE &to 0>;
+            bindings = <&to 0 &kp ESCAPE>;
         };
     };
 
@@ -332,7 +260,7 @@
             key-positions = <17 18>;
         };
 
-        VIM_OUT {
+        RESET {
             bindings = <&esc_0>;
             key-positions = <15 20>;
         };
@@ -342,7 +270,7 @@
             key-positions = <16 19>;
         };
 
-        VIM_OUT_2 {
+        RESET_w {
             bindings = <&esc_0>;
             key-positions = <17 18>;
         };
@@ -403,7 +331,7 @@
 
         VIM {
             bindings = <
-&none           &none   &vim_word  &kp LA(RIGHT)           &none         &none        &kp K_COPY            &kp K_UNDO                   &to 0               &vim_o  &kp K_PASTE  &none
+&none           &none   &vim_word  &kp LA(RIGHT)   &kp LS(LG(Z))         &none        &kp K_COPY             &kp LG(Z)                   &to 0               &vim_o  &kp K_PASTE  &none
 &none       &kp LCTRL    &kp LALT   &kp LEFT_GUI  &kp LEFT_SHIFT        &vim_g          &kp LEFT  &hm RIGHT_SHIFT DOWN  &hm RIGHT_GUI UP_ARROW  &hm RIGHT_ALT RIGHT        &none  &none
 &none  &kp LEFT_SHIFT  &kp DELETE          &none  &kt LEFT_SHIFT  &kp LA(LEFT)             &none                 &none                   &none          &key_repeat        &none  &none
                                     &kp LG(LEFT)          &trans        &trans    &vim_backspace                &trans           &kp RG(RIGHT)
