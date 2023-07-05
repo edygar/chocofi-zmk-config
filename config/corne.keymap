@@ -346,7 +346,7 @@
 &none  &kp EXCLAMATION           &kp CARET     &kp DOLLAR              &kp LEFT_BRACE          &kp RIGHT_BRACE    &kp ASTERISK              &kp NUMBER_7            &kp NUMBER_8            &kp NUMBER_9         &kp PLUS  &none
 &none     &hm LCTRL AT  &hm LALT AMPERSAND  &hm LGUI PIPE  &hm LSHFT LEFT_PARENTHESIS  &lt 4 RIGHT_PARENTHESIS       &kp SLASH  &hm RIGHT_SHIFT NUMBER_4  &hm RIGHT_GUI NUMBER_5  &hm RIGHT_ALT NUMBER_6  &hm RCTRL MINUS  &none
 &none      &kp PERCENT            &kp HASH   &kp ASTERISK            &kp LEFT_BRACKET                 &kp RBKT    &kp NUMBER_0              &kp NUMBER_1            &kp NUMBER_2            &kp NUMBER_3        &kp EQUAL  &none
-                                                &kp GRAVE               &kp SEMICOLON                   &trans          &trans                    &trans          &kp UNDERSCORE
+                                                &kp GRAVE               &kp SEMICOLON                   &trans      &kp DELETE                    &trans          &kp UNDERSCORE
             >;
         };
 
