@@ -11,10 +11,6 @@
 #define DEFAULT_L 0
 
 / {
-    chosen {
-      zmk,matrix_transform = &keymap_transform_1;
-    };
-
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
