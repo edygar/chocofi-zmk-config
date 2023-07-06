@@ -10,10 +10,10 @@
     chosen {
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &five_column_transform;
+        zmk,matrix_transform = &default_transform;
     };
 
-    five_column_transform: keymap_transform_1 {
+    default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <10>;
         rows = <4>;
