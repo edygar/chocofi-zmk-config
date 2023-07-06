@@ -381,7 +381,7 @@
             bindings = <
 &none  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC       &none    &trans  &trans  &trans  &trans  &trans  &none
 &none  &trans          &kp C_VOL_DN             &kp C_MUTE          &kp C_VOL_UP      &trans    &trans  &trans  &trans  &trans  &trans  &none
-&none  &trans            &kp C_NEXT               &kp K_PP        &kp RS(C_NEXT)      &trans    &trans  &trans  &trans  &trans  &trans  &none
+&none  &trans            &kp C_PREV               &kp K_PP            &kp C_NEXT      &trans    &trans  &trans  &trans  &trans  &trans  &none
                                               &bt BT_SEL 0          &bt BT_SEL 1  &bt BT_CLR    &trans  &trans  &trans
             >;
         };
