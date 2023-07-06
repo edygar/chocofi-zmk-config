@@ -12,10 +12,10 @@
 #define DEFAULT_L 0
 
 / {
-   chosen {
+    chosen {
         zmk,matrix_transform = &five_column_transform;
     };
-    
+
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -287,17 +287,17 @@
 
         RESET {
             bindings = <&esc_0>;
-            key-positions = <15 20>;
+            key-positions = <12 16>;
         };
 
         toggle_shift {
             bindings = <&caps_word>;
-            key-positions = <16 19>;
+            key-positions = <16 13>;
         };
 
         RESET_w {
             bindings = <&esc_0>;
-            key-positions = <17 18>;
+            key-positions = <14 15>;
         };
     };
 
