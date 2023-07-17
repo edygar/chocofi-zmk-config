@@ -360,10 +360,10 @@
 
         VIM {
             bindings = <
-           &none   &vim_word  &kp LA(RIGHT)   &kp LS(LG(Z))         &none        &kp K_COPY             &kp LG(Z)                   &to 0               &vim_o  &kp K_PASTE
-       &kp LCTRL    &kp LALT   &kp LEFT_GUI  &kp LEFT_SHIFT        &vim_g          &kp LEFT  &hm RIGHT_SHIFT DOWN  &hm RIGHT_GUI UP_ARROW  &hm RIGHT_ALT RIGHT        &none
-  &kp LEFT_SHIFT  &kp DELETE          &none  &kt LEFT_SHIFT  &kp LA(LEFT)             &none                 &none                   &none          &key_repeat        &none
-                               &kp LG(LEFT)          &trans        &trans    &vim_backspace                &trans                    &end
+                    &none   &vim_word  &kp LA(RIGHT)   &kp LS(LG(Z))         &none        &kp K_COPY             &kp LG(Z)                   &to 0               &vim_o  &kp K_PASTE
+  &hm LEFT_CONTROL ESCAPE    &kp LALT   &kp LEFT_GUI  &kp LEFT_SHIFT        &vim_g          &kp LEFT  &hm RIGHT_SHIFT DOWN  &hm RIGHT_GUI UP_ARROW  &hm RIGHT_ALT RIGHT   &kp ESCAPE
+           &kp LEFT_SHIFT  &kp DELETE          &none  &kt LEFT_SHIFT  &kp LA(LEFT)             &none                 &none                   &none          &key_repeat        &none
+                                        &kp LG(LEFT)          &trans        &trans    &vim_backspace                &trans                    &end
             >;
         };
 
