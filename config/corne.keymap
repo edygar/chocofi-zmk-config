@@ -40,7 +40,7 @@
                 <&kp DOT>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         vim_i: vim_i {
             compatible = "zmk,behavior-mod-morph";
@@ -50,7 +50,7 @@
                 <&vim_I>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         vim_o: vim_o {
             compatible = "zmk,behavior-mod-morph";
@@ -60,16 +60,7 @@
                 <&previous_line_enter>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-        vim_g: vim_g {
-            compatible = "zmk,behavior-tap-dance";
-            label = "VIM_G";
-            #binding-cells = <0>;
-            tapping-term-ms = <100>;
-            bindings =
-                <&kp END>,
-                <&kp HOME>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         vim_c_r: vim_c_r {
             compatible = "zmk,behavior-mod-morph";
@@ -79,7 +70,7 @@
                 <&kp LG(LS(Z))>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
         vim_backspace: vim_backspace {
             compatible = "zmk,behavior-mod-morph";
@@ -89,7 +80,7 @@
                 <&kp LA(DELETE)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
         slashandbackslash: slashandbackslash {
             compatible = "zmk,behavior-mod-morph";
@@ -99,7 +90,7 @@
                 <&kp BACKSLASH>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
         quote: quote {
             compatible = "zmk,behavior-mod-morph";
@@ -109,7 +100,7 @@
                 <&kp GRAVE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
         coma_semi: coma_semi {
             compatible = "zmk,behavior-mod-morph";
@@ -119,7 +110,7 @@
                 <&kp SEMI>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
         dot_colon: dot_colon {
             compatible = "zmk,behavior-mod-morph";
@@ -129,7 +120,7 @@
                 <&kp COLON>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
         q_grave: q_grave {
             compatible = "zmk,behavior-mod-morph";
@@ -139,7 +130,7 @@
                 <&kp GRAVE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
         home: home {
             compatible = "zmk,behavior-mod-morph";
@@ -149,7 +140,7 @@
                 <&kp HOME>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         end: end {
             compatible = "zmk,behavior-mod-morph";
@@ -159,7 +150,17 @@
                 <&kp END>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RALT)>;
+        };
+        quote_grave: quote_grave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUOTE_GRAVE";
+            bindings =
+                <&hm RCTRL SINGLE_QUOTE>,
+                <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
     };
 
@@ -312,7 +313,7 @@
             label = "DEF";
             bindings = <
      &q_grave           &kp W             &lt 2 E           &lt 1 R      &lt 6 T            &lt 9 Y            &lt 2 U              &lt 1 I            &kp O               &kp P
-  &hm LCTRL A  &hm LEFT_ALT S      &hm LEFT_GUI D  &hm LEFT_SHIFT F      &lt 4 G            &lt 4 H  &hm RIGHT_SHIFT J       &hm LEFT_GUI K  &hm RIGHT_ALT L       &hm RCTRL SQT
+  &hm LCTRL A  &hm LEFT_ALT S      &hm LEFT_GUI D  &hm LEFT_SHIFT F      &lt 4 G            &lt 4 H  &hm RIGHT_SHIFT J       &hm LEFT_GUI K  &hm RIGHT_ALT L        &quote_grave
         &kp Z           &kp X               &kp C             &kp V      &lt 7 B            &lt 3 N              &kp M           &coma_semi       &dot_colon  &slashandbackslash
                                &lt 8 LEFT_BRACKET  &hm LEFT_GUI TAB  &lt 5 SPACE    &lt 5 BACKSPACE        &lt 4 ENTER  &lt 6 RIGHT_BRACKET
             >;
@@ -361,7 +362,7 @@
         VIM {
             bindings = <
                     &none   &vim_word  &kp LA(RIGHT)   &kp LS(LG(Z))         &none        &kp K_COPY             &kp LG(Z)                   &to 0               &vim_o  &kp K_PASTE
-  &hm LEFT_CONTROL ESCAPE    &kp LALT   &kp LEFT_GUI  &kp LEFT_SHIFT        &vim_g          &kp LEFT  &hm RIGHT_SHIFT DOWN  &hm RIGHT_GUI UP_ARROW  &hm RIGHT_ALT RIGHT   &kp ESCAPE
+  &hm LEFT_CONTROL ESCAPE    &kp LALT   &kp LEFT_GUI  &kp LEFT_SHIFT         &none          &kp LEFT  &hm RIGHT_SHIFT DOWN  &hm RIGHT_GUI UP_ARROW  &hm RIGHT_ALT RIGHT   &kp ESCAPE
            &kp LEFT_SHIFT  &kp DELETE          &none  &kt LEFT_SHIFT  &kp LA(LEFT)             &none                 &none                   &none          &key_repeat        &none
                                         &kp LG(LEFT)          &trans        &trans    &vim_backspace                &trans                    &end
             >;
