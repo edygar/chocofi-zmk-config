@@ -65,11 +65,11 @@
         vim_c_r: vim_c_r {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_C_R";
+            #binding-cells = <0>;
             bindings =
                 <&none>,
                 <&kp LG(LS(Z))>;
 
-            #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
         vim_backspace: vim_backspace {
@@ -361,9 +361,9 @@
 
         VIM {
             bindings = <
-                    &none   &vim_word  &kp LA(RIGHT)   &kp LS(LG(Z))         &none        &kp K_COPY             &kp LG(Z)                   &to 0               &vim_o  &kp K_PASTE
-  &hm LEFT_CONTROL ESCAPE    &kp LALT   &kp LEFT_GUI  &kp LEFT_SHIFT         &none          &kp LEFT  &hm RIGHT_SHIFT DOWN  &hm RIGHT_GUI UP_ARROW  &hm RIGHT_ALT RIGHT   &kp ESCAPE
-           &kp LEFT_SHIFT  &kp DELETE          &none  &kt LEFT_SHIFT  &kp LA(LEFT)             &none                 &none                   &none          &key_repeat        &none
+                    &none   &vim_word  &kp LA(RIGHT)   &kp LS(LG(Z))         &none        &kp K_COPY             &kp LG(Z)                   &to 0               &vim_o       &kp K_PASTE
+  &hm LEFT_CONTROL ESCAPE    &kp LALT   &kp LEFT_GUI  &kp LEFT_SHIFT         &none          &kp LEFT  &hm RIGHT_SHIFT DOWN  &hm RIGHT_GUI UP_ARROW  &hm RIGHT_ALT RIGHT  &hm RCTRL ESCAPE
+           &kp LEFT_SHIFT  &kp DELETE          &none  &kt LEFT_SHIFT  &kp LA(LEFT)             &none                 &none                   &none          &key_repeat             &none
                                         &kp LG(LEFT)          &trans        &trans    &vim_backspace                &trans                    &end
             >;
         };
