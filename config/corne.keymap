@@ -102,22 +102,22 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
         };
-        coma_semi: coma_semi {
+        coma_colon: coma_colon {
             compatible = "zmk,behavior-mod-morph";
-            label = "COMA_SEMI";
+            label = "COMA_COLON";
             bindings =
                 <&kp COMMA>,
-                <&kp SEMI>;
+                <&kp COLON>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
         };
-        dot_colon: dot_colon {
+        dot_semi: dot_semi {
             compatible = "zmk,behavior-mod-morph";
-            label = "DOT_COLON";
+            label = "DOT_SEMI";
             bindings =
                 <&kp PERIOD>,
-                <&kp COLON>;
+                <&kp SEMI>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
@@ -332,7 +332,7 @@
             bindings = <
   &q_grave     &kp W           &lt 2 E             &lt 1 R           &lt 6 T        &lt 9 Y          &lt 2 U            &lt 1 I              &kp O            &kp P
   &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D      &hm LEFT_SHIFT F  &lt 4 G        &lt 4 H          &hm RIGHT_SHIFT J  &hm LEFT_GUI K       &hm RIGHT_ALT L  &hm RCTRL SINGLE_QUOTE
-  &kp Z        &kp X           &kp C               &kp V             &lt 7 B        &lt 3 N          &kp M              &coma_semi           &dot_colon       &slashandbackslash
+  &kp Z        &kp X           &kp C               &kp V             &lt 7 B        &lt 3 N          &kp M              &coma_colon          &dot_semi        &slashandbackslash
                                &lt 8 LEFT_BRACKET  &hm LEFT_GUI TAB  &lt 5 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER        &lt 6 RIGHT_BRACKET
             >;
         };
