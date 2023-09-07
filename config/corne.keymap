@@ -317,11 +317,6 @@
             bindings = <&esc_0>;
             key-positions = <14 15>;
         };
-
-        new_combo {
-            bindings = <&bt>;
-            key-positions = <30 31 32 33 35 34>;
-        };
     };
 
     keymap {
