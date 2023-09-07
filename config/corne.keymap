@@ -121,6 +121,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         q_grave: q_grave {
             compatible = "zmk,behavior-mod-morph";
@@ -329,19 +330,19 @@
         default_layer {
             label = "DEF";
             bindings = <
-     &q_grave           &kp W             &lt 2 E           &lt 1 R      &lt 6 T            &lt 9 Y            &lt 2 U              &lt 1 I            &kp O                   &kp P
-  &hm LCTRL A  &hm LEFT_ALT S      &hm LEFT_GUI D  &hm LEFT_SHIFT F      &lt 4 G            &lt 4 H  &hm RIGHT_SHIFT J       &hm LEFT_GUI K  &hm RIGHT_ALT L  &hm RCTRL SINGLE_QUOTE
-        &kp Z           &kp X               &kp C             &kp V      &lt 7 B            &lt 3 N              &kp M           &coma_semi       &dot_colon      &slashandbackslash
-                               &lt 8 LEFT_BRACKET  &hm LEFT_GUI TAB  &lt 5 SPACE    &lt 5 BACKSPACE        &lt 4 ENTER  &lt 6 RIGHT_BRACKET
+  &q_grave     &kp W           &lt 2 E             &lt 1 R           &lt 6 T        &lt 9 Y          &lt 2 U            &lt 1 I              &kp O            &kp P
+  &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D      &hm LEFT_SHIFT F  &lt 4 G        &lt 4 H          &hm RIGHT_SHIFT J  &hm LEFT_GUI K       &hm RIGHT_ALT L  &hm RCTRL SINGLE_QUOTE
+  &kp Z        &kp X           &kp C               &kp V             &lt 7 B        &lt 3 N          &kp M              &coma_semi           &dot_colon       &slashandbackslash
+                               &lt 8 LEFT_BRACKET  &hm LEFT_GUI TAB  &lt 5 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER        &lt 6 RIGHT_BRACKET
             >;
         };
 
         acute {
             bindings = <
-   &trans  &trans  &eacute  &trans  &trans    &trans  &uacute  &iacute  &oacute  &trans
-  &aacute  &trans   &trans  &trans  &trans    &trans   &trans   &trans   &trans  &trans
-   &trans  &trans   &trans  &trans  &trans    &trans   &trans   &trans   &trans  &trans
-                    &trans  &trans  &trans    &trans   &trans   &trans
+  &trans   &trans  &eacute  &trans  &trans    &trans  &uacute  &iacute  &oacute  &trans
+  &aacute  &trans  &trans   &trans  &trans    &trans  &trans   &trans   &trans   &trans
+  &trans   &trans  &trans   &trans  &trans    &trans  &trans   &trans   &trans   &trans
+                   &trans   &trans  &trans    &trans  &trans   &trans
             >;
 
             label = "acute";
@@ -360,63 +361,63 @@
 
         tilde {
             bindings = <
-   &trans  &trans     &trans  &trans  &trans    &trans     &trans  &trans    &oes  &trans
-  &atilde     &ao       &aes  &trans  &trans    &trans     &trans  &trans  &trans  &trans
-   &trans  &trans  &kp LA(C)  &trans  &trans    &trans  &kp TILDE  &trans  &trans  &trans
-                      &trans  &trans  &trans    &trans     &trans  &trans
+  &trans   &trans  &trans     &trans  &trans    &trans  &trans     &trans  &oes    &trans
+  &atilde  &ao     &aes       &trans  &trans    &trans  &trans     &trans  &trans  &trans
+  &trans   &trans  &kp LA(C)  &trans  &trans    &trans  &kp TILDE  &trans  &trans  &trans
+                   &trans     &trans  &trans    &trans  &trans     &trans
             >;
         };
 
         numpad_sym {
             bindings = <
-  &kp EXCLAMATION      &kp CARET          &kp DOLLAR              &kp LEFT_BRACE          &kp RIGHT_BRACE    &kp ASTERISK              &kp NUMBER_7            &kp NUMBER_8            &kp NUMBER_9         &kp PLUS
-     &hm LCTRL AT  &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &lt 4 RIGHT_PARENTHESIS       &kp SLASH  &hm RIGHT_SHIFT NUMBER_4  &hm RIGHT_GUI NUMBER_5  &hm RIGHT_ALT NUMBER_6  &hm RCTRL MINUS
-      &kp PERCENT       &kp HASH        &kp ASTERISK            &kp LEFT_BRACKET                 &kp RBKT    &kp NUMBER_0              &kp NUMBER_1            &kp NUMBER_2            &kp NUMBER_3        &kp EQUAL
-                                           &kp GRAVE     &mt LEFT_GUI UNDERSCORE                   &trans      &kp DELETE                    &trans           &kp SEMICOLON
+  &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE            &kp ASTERISK  &kp NUMBER_7              &kp NUMBER_8            &kp NUMBER_9            &kp PLUS
+  &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &lt 4 RIGHT_PARENTHESIS    &kp SLASH     &hm RIGHT_SHIFT NUMBER_4  &hm RIGHT_GUI NUMBER_5  &hm RIGHT_ALT NUMBER_6  &hm RCTRL MINUS
+  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                   &kp NUMBER_0  &kp NUMBER_1              &kp NUMBER_2            &kp NUMBER_3            &kp EQUAL
+                                  &kp GRAVE           &mt LEFT_GUI UNDERSCORE     &trans                     &kp DELETE    &trans                    &kp SEMICOLON
             >;
         };
 
         VIM {
             bindings = <
-                    &none   &vim_word  &kp LA(RIGHT)   &kp LS(LG(Z))         &none        &kp K_COPY             &kp LG(Z)                   &to 0               &vim_o       &kp K_PASTE
-  &hm LEFT_CONTROL ESCAPE    &kp LALT   &kp LEFT_GUI  &kp LEFT_SHIFT         &none          &kp LEFT  &hm RIGHT_SHIFT DOWN  &hm RIGHT_GUI UP_ARROW  &hm RIGHT_ALT RIGHT  &hm RCTRL ESCAPE
-           &kp LEFT_SHIFT  &kp DELETE          &none  &kt LEFT_SHIFT  &kp LA(LEFT)             &none                 &none                   &none          &key_repeat             &none
-                                        &kp LG(LEFT)          &trans        &trans    &vim_backspace                &trans                    &end
+  &none                    &vim_word   &kp LA(RIGHT)  &kp LS(LG(Z))   &none           &kp K_COPY      &kp LG(Z)             &to 0                   &vim_o               &kp K_PASTE
+  &hm LEFT_CONTROL ESCAPE  &kp LALT    &kp LEFT_GUI   &kp LEFT_SHIFT  &none           &kp LEFT        &hm RIGHT_SHIFT DOWN  &hm RIGHT_GUI UP_ARROW  &hm RIGHT_ALT RIGHT  &hm RCTRL ESCAPE
+  &kp LEFT_SHIFT           &kp DELETE  &none          &kt LEFT_SHIFT  &kp LA(LEFT)    &none           &none                 &none                   &key_repeat          &none
+                                       &kp LG(LEFT)   &trans          &trans          &vim_backspace  &trans                &end
             >;
         };
 
         FN_R {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans     &sys_reset      &kp F7      &kp F8  &kp F9  &kp F10
-  &trans  &trans  &trans  &trans  &trans    &bootloader      &kp F4      &kp F5  &kp F6  &kp F11
-  &trans  &trans  &trans  &trans  &trans     &kp K_LOCK      &kp F1      &kp F2  &kp F3  &kp F12
-                  &trans  &trans  &trans     &bt BT_CLR  &bt BT_PRV  &bt BT_NXT
+  &trans  &trans  &trans  &trans  &trans    &sys_reset   &kp F7      &kp F8      &kp F9  &kp F10
+  &trans  &trans  &trans  &trans  &trans    &bootloader  &kp F4      &kp F5      &kp F6  &kp F11
+  &trans  &trans  &trans  &trans  &trans    &kp K_LOCK   &kp F1      &kp F2      &kp F3  &kp F12
+                  &trans  &trans  &trans    &bt BT_CLR   &bt BT_PRV  &bt BT_NXT
             >;
         };
 
         MEDIA_R {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans        &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC   &none
-  &trans  &trans  &trans  &trans  &trans        &trans          &kp C_VOL_DN             &kp C_MUTE          &kp C_VOL_UP  &trans
-  &trans  &trans  &trans  &trans  &trans        &trans            &kp C_PREV       &kp C_PLAY_PAUSE            &kp C_NEXT  &trans
-                  &trans  &trans  &trans    &bt BT_CLR            &bt BT_PRV             &bt BT_NXT
+  &trans  &trans  &trans  &trans  &trans    &trans      &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC  &none
+  &trans  &trans  &trans  &trans  &trans    &trans      &kp C_VOL_DN          &kp C_MUTE             &kp C_VOL_UP          &trans
+  &trans  &trans  &trans  &trans  &trans    &trans      &kp C_PREV            &kp C_PLAY_PAUSE       &kp C_NEXT            &trans
+                  &trans  &trans  &trans    &bt BT_CLR  &bt BT_PRV            &bt BT_NXT
             >;
         };
 
         MEDIA_L {
             bindings = <
-  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC       &none    &trans  &trans  &trans  &trans  &trans
-  &trans          &kp C_VOL_DN             &kp C_MUTE          &kp C_VOL_UP      &trans    &trans  &trans  &trans  &trans  &trans
-  &trans            &kp C_PREV       &kp C_PLAY_PAUSE            &kp C_NEXT      &trans    &trans  &trans  &trans  &trans  &trans
-                                           &bt BT_PRV            &bt BT_NXT  &bt BT_CLR    &trans  &trans  &trans
+  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_AUTO  &kp C_BRIGHTNESS_INC  &none         &trans  &trans  &trans  &trans  &trans
+  &trans  &kp C_VOL_DN          &kp C_MUTE             &kp C_VOL_UP          &trans        &trans  &trans  &trans  &trans  &trans
+  &trans  &kp C_PREV            &kp C_PLAY_PAUSE       &kp C_NEXT            &trans        &trans  &trans  &trans  &trans  &trans
+                                &bt BT_PRV             &bt BT_NXT            &bt BT_CLR    &trans  &trans  &trans
             >;
         };
 
         FN_L {
             bindings = <
-  &bootloader  &kp F7      &kp F8      &kp F9     &kp F10    &trans  &trans  &trans  &trans  &trans
-   &sys_reset  &kp F4      &kp F5      &kp F6     &kp F12    &trans  &trans  &trans  &trans  &trans
-   &kp K_LOCK  &kp F1      &kp F2      &kp F3     &kp F12    &trans  &trans  &trans  &trans  &trans
+  &bootloader  &kp F7  &kp F8      &kp F9      &kp F10       &trans  &trans  &trans  &trans  &trans
+  &sys_reset   &kp F4  &kp F5      &kp F6      &kp F12       &trans  &trans  &trans  &trans  &trans
+  &kp K_LOCK   &kp F1  &kp F2      &kp F3      &kp F12       &trans  &trans  &trans  &trans  &trans
                        &bt BT_PRV  &bt BT_NXT  &bt BT_CLR    &trans  &trans  &trans
             >;
         };
