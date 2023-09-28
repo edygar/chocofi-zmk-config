@@ -167,6 +167,36 @@
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
         };
+        dot_comma: dot_comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_COMMA";
+            bindings =
+                <&kp DOT>,
+                <&kp COMMA>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        multiply: multiply {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MULTIPLY";
+            bindings =
+                <&kp ASTERISK>,
+                <&kp LEFT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        seven: seven {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEVEN";
+            bindings =
+                <&kp N7>,
+                <&kp RIGHT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -357,10 +387,10 @@
 
         numpad_sym {
             bindings = <
-  &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE            &kp ASTERISK  &kp NUMBER_7              &kp NUMBER_8            &kp NUMBER_9            &kp PLUS
+  &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE            &multiply     &seven                    &kp NUMBER_8            &kp NUMBER_9            &kp PLUS
   &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &lt 4 RIGHT_PARENTHESIS    &kp SLASH     &hm RIGHT_SHIFT NUMBER_4  &hm RIGHT_GUI NUMBER_5  &hm RIGHT_ALT NUMBER_6  &hm RCTRL MINUS
   &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                   &kp NUMBER_0  &kp NUMBER_1              &kp NUMBER_2            &kp NUMBER_3            &kp EQUAL
-                                  &kp GRAVE           &mt LEFT_GUI UNDERSCORE     &trans                     &kp DELETE    &trans                    &kp SEMICOLON
+                                  &kp GRAVE           &mt LEFT_GUI UNDERSCORE     &trans                     &kp DELETE    &trans                    &dot_comma
             >;
         };
 
