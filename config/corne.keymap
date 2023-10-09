@@ -168,7 +168,8 @@
             bindings = <&kp EQUAL>, <&thic_arrow>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
