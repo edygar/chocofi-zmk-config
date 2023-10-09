@@ -165,7 +165,7 @@
         equalsgreaterthan: equalsgreaterthan {
             compatible = "zmk,behavior-mod-morph";
             label = "EQUALSGREATERTHAN";
-            bindings = <&kp EQUAL>, <&kp GREATER_THAN>;
+            bindings = <&kp EQUAL>, <&thic_arrow>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
@@ -292,6 +292,18 @@
             label = "NEXT_LINE_ENTER";
             #binding-cells = <0>;
             bindings = <&kp LG(RIGHT) &kp ENTER>;
+        };
+        thic_arrow: thic_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp GT>;
+            label = "THIC_ARROW";
+        };
+        thin_arrow: thin_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GT>;
+            label = "THIN_ARROW";
         };
     };
 
