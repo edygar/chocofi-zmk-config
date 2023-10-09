@@ -28,16 +28,12 @@
             tapping-term-ms = <200>;
             quick_tap_ms = <200>;
             flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
         };
         vim_i: vim_i {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_I";
-            bindings =
-                <&to 0>,
-                <&vim_I>;
+            bindings = <&to 0>, <&vim_I>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -45,9 +41,7 @@
         vim_o: vim_o {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_O";
-            bindings =
-                <&next_line_enter>,
-                <&previous_line_enter>;
+            bindings = <&next_line_enter>, <&previous_line_enter>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -56,18 +50,14 @@
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_C_R";
             #binding-cells = <0>;
-            bindings =
-                <&none>,
-                <&kp LG(LS(Z))>;
+            bindings = <&none>, <&kp LG(LS(Z))>;
 
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
         vim_backspace: vim_backspace {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_BACKSPACE";
-            bindings =
-                <&kp LA(BACKSPACE)>,
-                <&kp LA(DELETE)>;
+            bindings = <&kp LA(BACKSPACE)>, <&kp LA(DELETE)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
@@ -75,9 +65,7 @@
         slashandbackslash: slashandbackslash {
             compatible = "zmk,behavior-mod-morph";
             label = "SLASHANDBACKSLASH";
-            bindings =
-                <&kp SLASH>,
-                <&kp BACKSLASH>;
+            bindings = <&kp SLASH>, <&kp BACKSLASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
@@ -85,9 +73,7 @@
         quote: quote {
             compatible = "zmk,behavior-mod-morph";
             label = "QUOTE";
-            bindings =
-                <&kp SINGLE_QUOTE>,
-                <&kp GRAVE>;
+            bindings = <&kp SINGLE_QUOTE>, <&kp GRAVE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
@@ -95,9 +81,7 @@
         coma_semi: coma_semi {
             compatible = "zmk,behavior-mod-morph";
             label = "COMA_SEMI";
-            bindings =
-                <&kp COMMA>,
-                <&kp SEMI>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
@@ -106,10 +90,7 @@
         dot_colon: dot_colon {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_COLON";
-            bindings =
-                <&kp PERIOD>,
-                <&kp COLON>,
-                <&kp LA(COLON)>;
+            bindings = <&kp PERIOD>, <&kp COLON>, <&kp LA(COLON)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
@@ -118,9 +99,7 @@
         q_grave: q_grave {
             compatible = "zmk,behavior-mod-morph";
             label = "Q_GRAVE";
-            bindings =
-                <&kp Q>,
-                <&kp GRAVE>;
+            bindings = <&kp Q>, <&kp GRAVE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
@@ -128,9 +107,7 @@
         home: home {
             compatible = "zmk,behavior-mod-morph";
             label = "HOME";
-            bindings =
-                <&kp LG(LEFT)>,
-                <&kp HOME>;
+            bindings = <&kp LG(LEFT)>, <&kp HOME>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -138,9 +115,7 @@
         end: end {
             compatible = "zmk,behavior-mod-morph";
             label = "END";
-            bindings =
-                <&kp LG(RIGHT)>,
-                <&kp END>;
+            bindings = <&kp LG(RIGHT)>, <&kp END>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RALT)>;
@@ -148,9 +123,7 @@
         quote_grave: quote_grave {
             compatible = "zmk,behavior-mod-morph";
             label = "QUOTE_GRAVE";
-            bindings =
-                <&hm RCTRL SINGLE_QUOTE>,
-                <&kp GRAVE>;
+            bindings = <&hm RCTRL SINGLE_QUOTE>, <&kp GRAVE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
@@ -158,9 +131,7 @@
         hm_quotes: hm_quotes {
             compatible = "zmk,behavior-hold-tap";
             label = "HM_QUOTES";
-            bindings =
-                <&quote_grave>,
-                <&kp>;
+            bindings = <&quote_grave>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -170,9 +141,7 @@
         dot_comma: dot_comma {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_COMMA";
-            bindings =
-                <&kp DOT>,
-                <&kp COMMA>;
+            bindings = <&kp DOT>, <&kp COMMA>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -180,9 +149,7 @@
         multiply: multiply {
             compatible = "zmk,behavior-mod-morph";
             label = "MULTIPLY";
-            bindings =
-                <&kp ASTERISK>,
-                <&kp LEFT_PARENTHESIS>;
+            bindings = <&kp ASTERISK>, <&kp LEFT_PARENTHESIS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -190,12 +157,18 @@
         seven: seven {
             compatible = "zmk,behavior-mod-morph";
             label = "SEVEN";
-            bindings =
-                <&kp N7>,
-                <&kp RIGHT_PARENTHESIS>;
+            bindings = <&kp N7>, <&kp RIGHT_PARENTHESIS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        equalsgreaterthan: equalsgreaterthan {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EQUALSGREATERTHAN";
+            bindings = <&kp EQUAL>, <&kp GREATER_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
     };
 
@@ -387,10 +360,10 @@
 
         numpad_sym {
             bindings = <
-  &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE            &multiply     &seven                    &kp NUMBER_8            &kp NUMBER_9            &kp PLUS
-  &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &lt 4 RIGHT_PARENTHESIS    &kp SLASH     &hm RIGHT_SHIFT NUMBER_4  &hm RIGHT_GUI NUMBER_5  &hm RIGHT_ALT NUMBER_6  &hm RCTRL MINUS
-  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                   &kp NUMBER_0  &kp NUMBER_1              &kp NUMBER_2            &kp NUMBER_3            &kp EQUAL
-                                  &kp GRAVE           &mt LEFT_GUI UNDERSCORE     &trans                     &kp DELETE    &trans                    &dot_comma
+  &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE            &multiply           &seven                    &kp NUMBER_8            &kp NUMBER_9            &kp PLUS
+  &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &lt 4 RIGHT_PARENTHESIS    &slashandbackslash  &hm RIGHT_SHIFT NUMBER_4  &hm RIGHT_GUI NUMBER_5  &hm RIGHT_ALT NUMBER_6  &hm RCTRL MINUS
+  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                   &kp NUMBER_0        &kp NUMBER_1              &kp NUMBER_2            &kp NUMBER_3            &kp EQUAL
+                                  &kp GRAVE           &mt LEFT_GUI UNDERSCORE     &trans                     &kp DELETE          &trans                    &dot_comma
             >;
         };
 
