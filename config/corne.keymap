@@ -123,7 +123,7 @@
         quote_grave: quote_grave {
             compatible = "zmk,behavior-mod-morph";
             label = "QUOTE_GRAVE";
-            bindings = <&hm RCTRL SINGLE_QUOTE>, <&kp GRAVE>;
+            bindings = <&kp SINGLE_QUOTE>, <&kp GRAVE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
@@ -131,7 +131,7 @@
         hm_quotes: hm_quotes {
             compatible = "zmk,behavior-hold-tap";
             label = "HM_QUOTES";
-            bindings = <&quote_grave>, <&kp>;
+            bindings = <&kp>, <&quote_grave>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -403,7 +403,7 @@
             label = "DEF";
             bindings = <
   &q_grave     &kp W           &lt 2 E             &lt 1 R           &lt 6 T        &lt 9 Y          &lt 2 U            &lt 1 I              &kp O            &kp P
-  &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D      &hm LEFT_SHIFT F  &lt 4 G        &lt 4 H          &hm RIGHT_SHIFT J  &hm LEFT_GUI K       &hm RIGHT_ALT L  &hm RCTRL SINGLE_QUOTE
+  &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D      &hm LEFT_SHIFT F  &lt 4 G        &lt 4 H          &hm RIGHT_SHIFT J  &hm LEFT_GUI K       &hm RIGHT_ALT L  &hm_quotes RCTRL 0
   &kp Z        &kp X           &kp C               &kp V             &lt 7 B        &lt 3 N          &kp M              &coma_semi           &dot_colon       &slashandbackslash
                                &lt 8 LEFT_BRACKET  &hm LEFT_GUI TAB  &lt 5 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER        &lt 6 RIGHT_BRACKET
             >;
