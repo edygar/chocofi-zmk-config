@@ -347,31 +347,31 @@
         };
         Eacute: Eacute {
             compatible = "zmk,behavior-macro";
-            label = "EACUTE";
+            label = "SEACUTE";
             #binding-cells = <0>;
             bindings = <&kp LA(E) &kp LS(E)>;
         };
         Aacute: Aacute {
             compatible = "zmk,behavior-macro";
-            label = "AACUTE";
+            label = "SAACUTE";
             #binding-cells = <0>;
             bindings = <&kp LA(E) &kp LS(A)>;
         };
         Iacute: Iacute {
             compatible = "zmk,behavior-macro";
-            label = "IACUTE";
+            label = "SIACUTE";
             #binding-cells = <0>;
             bindings = <&kp LA(E) &kp LS(I)>;
         };
         Oacute: Oacute {
             compatible = "zmk,behavior-macro";
-            label = "OACUTE";
+            label = "SOACUTE";
             #binding-cells = <0>;
             bindings = <&kp LA(E) &kp LS(O)>;
         };
         Uacute: Uacute {
             compatible = "zmk,behavior-macro";
-            label = "UACUTE";
+            label = "SUACUTE";
             #binding-cells = <0>;
             bindings = <&kp LA(E) &kp LS(U)>;
         };
