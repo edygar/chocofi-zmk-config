@@ -170,7 +170,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        aAacute: aAacute {
+        asaacute: asaacute {
             compatible = "zmk,behavior-mod-morph";
             label = "AAACUTE";
             bindings = <&aacute>, <&aacute>;
@@ -178,34 +178,34 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
-        eEacute: eEacute {
+        eseacute: eseacute {
             compatible = "zmk,behavior-mod-morph";
             label = "EEACUTE";
-            bindings = <&eacute>, <&Eacute>;
+            bindings = <&eacute>, <&seacute>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
-        iIacute: iIacute {
+        isiacute: isiacute {
             compatible = "zmk,behavior-mod-morph";
             label = "IIACUTE";
-            bindings = <&iacute>, <&Iacute>;
+            bindings = <&iacute>, <&siacute>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
-        oOacute: oOacute {
+        osoacute: osoacute {
             compatible = "zmk,behavior-mod-morph";
             label = "OOACUTE";
-            bindings = <&oacute>, <&Oacute>;
+            bindings = <&oacute>, <&soacute>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
-        uUacute: uUacute {
+        usuacute: usuacute {
             compatible = "zmk,behavior-mod-morph";
             label = "UUACUTE";
-            bindings = <&uacute>, <&Uacute>;
+            bindings = <&uacute>, <&suacute>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -345,31 +345,31 @@
             bindings = <&kp MINUS &kp GT>;
             label = "THIN_ARROW";
         };
-        Eacute: Eacute {
+        seacute: seacute {
             compatible = "zmk,behavior-macro";
             label = "SEACUTE";
             #binding-cells = <0>;
             bindings = <&kp LA(E) &kp LS(E)>;
         };
-        Aacute: Aacute {
+        saacute: saacute {
             compatible = "zmk,behavior-macro";
             label = "SAACUTE";
             #binding-cells = <0>;
             bindings = <&kp LA(E) &kp LS(A)>;
         };
-        Iacute: Iacute {
+        siacute: siacute {
             compatible = "zmk,behavior-macro";
             label = "SIACUTE";
             #binding-cells = <0>;
             bindings = <&kp LA(E) &kp LS(I)>;
         };
-        Oacute: Oacute {
+        soacute: soacute {
             compatible = "zmk,behavior-macro";
             label = "SOACUTE";
             #binding-cells = <0>;
             bindings = <&kp LA(E) &kp LS(O)>;
         };
-        Uacute: Uacute {
+        suacute: suacute {
             compatible = "zmk,behavior-macro";
             label = "SUACUTE";
             #binding-cells = <0>;
@@ -411,8 +411,8 @@
 
         acute {
             bindings = <
-  &trans    &trans  &eEacute  &trans  &trans    &trans  &uUacute  &iIacute  &oOacute  &trans
-  &aAacute  &trans  &trans    &trans  &trans    &trans  &trans    &trans    &trans    &trans
+  &trans    &trans  &eseacute  &trans  &trans    &trans  &usuacute  &isiacute  &osoacute  &trans
+  &asaacute  &trans  &trans    &trans  &trans    &trans  &trans    &trans    &trans    &trans
   &trans    &trans  &trans    &trans  &trans    &trans  &trans    &trans    &trans    &trans
                     &trans    &trans  &trans    &trans  &trans    &trans
             >;
