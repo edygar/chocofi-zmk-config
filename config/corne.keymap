@@ -494,12 +494,12 @@
             >;
         };
 
-        sym_numpad {
+        sym_num {
             bindings = <
- &multiply           &seven                    &kp NUMBER_8            &kp NUMBER_9            &kp PLUS                                             &kp RIGHT_BRACE &kp LEFT_BRACE &kp DOLLAR &kp CARET &kp EXCLAMATION 
-&slashandbackslash  &hm RIGHT_SHIFT NUMBER_4  &hm RIGHT_GUI NUMBER_5  &hm RIGHT_ALT NUMBER_6  &hm RCTRL MINUS  &lt 4 RIGHT_PARENTHESIS &hm LSHFT LEFT_PARENTHESIS &hm LGUI AMPERSAND &hm LALT PIPE &hm LCTRL AT 
-      &kp RBKT &kp LEFT_BRACKET &kp ASTERISK &kp HASH &kp PERCENT &kp NUMBER_0        &kp NUMBER_1              &kp NUMBER_2            &kp NUMBER_3            &equalsgreaterthan
-                                                                        &trans &mt LEFT_GUI UNDERSCORE &kp GRAVE &trans              &trans                    &dot_comma
+&trans  &trans  &trans  &trans  &trans  &kp RIGHT_BRACE &kp LEFT_BRACE &kp DOLLAR &kp CARET &kp EXCLAMATION 
+&trans  &trans  &trans  &trans  &trans  &lt 4 RIGHT_PARENTHESIS &hm LSHFT LEFT_PARENTHESIS &hm LGUI AMPERSAND &hm LALT PIPE &hm LCTRL AT 
+&trans  &trans  &trans  &trans  &trans  &kp NUMBER_1              &kp NUMBER_2            &kp NUMBER_3            &equalsgreaterthan
+                &trans  &trans  &trans                                                                        &trans &mt LEFT_GUI UNDERSCORE &kp GRAVE &trans              &trans                    &dot_comma
             >;
         };
     };
