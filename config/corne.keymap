@@ -319,37 +319,37 @@
             bindings = <&kp N3>, <&kp DOT>;
         };
 
-        num_4: num_4 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NUM_4";
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&kp N4>, <&kp RIGHT_PARENTHESIS>;
-        };
-
         num_5: num_5 {
             compatible = "zmk,behavior-mod-morph";
             label = "NUM_5";
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&kp N5>, <&kp LT>;
+            mods = <(MOD_LSFT)>;
+            bindings = <&hm RIGHT_GUI N5>, <&kp LT>;
         };
 
         num_6: num_6 {
             compatible = "zmk,behavior-mod-morph";
             label = "NUM_6";
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&kp N6>, <&kp GT>;
+            mods = <(MOD_LSFT)>;
+            bindings = <&hm RIGHT_ALT NUMBER_6>, <&kp GT>;
         };
 
-
-        quote_minus: quote_minus {
+        hm_quote_minus: hm_quote_minus {
             compatible = "zmk,behavior-mod-morph";
-            label = "quote_minus";
+            label = "HM_QUOTE_MINUS";
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&kp MINUS>, <&kp QUOTE>;
+            mods = <(MOD_LSFT)>;
+            bindings = <&hm RCTRL MINUS>, <&kp DOUBLE_QUOTES>;
+        };
+
+        num_4: num_4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM_4";
+            bindings = <&hm RIGHT_SHIFT N4>, <&kp RIGHT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
@@ -644,10 +644,10 @@
 
         numpad_sym {
             bindings = <
-  &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE            &multiply           &seven                    &kp NUMBER_8            &kp NUMBER_9            &kp PLUS
-  &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &lt 4 RIGHT_PARENTHESIS    &slashandbackslash  &hm RIGHT_SHIFT NUMBER_4  &hm RIGHT_GUI NUMBER_5  &hm RIGHT_ALT NUMBER_6  &hm RCTRL MINUS
-  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                   &num_0              &kp NUMBER_1              &kp NUMBER_2            &kp NUMBER_3            &equalsgreaterthan
-                                  &kp GRAVE           &mt LEFT_GUI UNDERSCORE     &trans                     &trans              &trans                    &dot_comma
+  &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE          &multiply  &num_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
+  &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &divide    &num_4  &num_5        &num_6        &hm_quote_minus
+  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                 &num_0     &num_1  &num_2        &num_3        &equalsgreaterthan
+                                  &kp GRAVE           &mt LEFT_GUI UNDERSCORE     &trans                   &trans     &trans  &dot_comma
             >;
         };
 
