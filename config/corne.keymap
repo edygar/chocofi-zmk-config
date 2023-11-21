@@ -164,16 +164,25 @@
         multiply: multiply {
             compatible = "zmk,behavior-mod-morph";
             label = "MULTIPLY";
-            bindings = <&kp ASTERISK>, <&kp LEFT_PARENTHESIS>;
+            bindings = <&kp ASTERISK>, <&kp LEFT_BRACE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        seven: seven {
+        divide: multiply {
             compatible = "zmk,behavior-mod-morph";
-            label = "SEVEN";
-            bindings = <&kp N7>, <&kp RIGHT_PARENTHESIS>;
+            label = "MULTIPLY";
+            bindings = <&kp SLASH>, <&kp LEFT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        num_7: num_7 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "num_7";
+            bindings = <&kp N7>, <&kp RIGHT_BRACE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -284,6 +293,63 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             bindings = <&kp N0>, <&kp LEFT_BRACKET>;
+        };
+
+        num_1: num_1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM_1";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp N1>, <&kp RIGHT_BRACKET>;
+        };
+
+        num_2: num_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM_2";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp N2>, <&kp COMMA>;
+        };
+
+        num_3: num_3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM_3";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp N3>, <&kp DOT>;
+        };
+
+        num_4: num_4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM_4";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp N4>, <&kp RIGHT_PARENTHESIS>;
+        };
+
+        num_5: num_5 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM_5";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp N5>, <&kp LT>;
+        };
+
+        num_6: num_6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM_6";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp N6>, <&kp GT>;
+        };
+
+
+        quote_minus: quote_minus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "quote_minus";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp MINUS>, <&kp QUOTE>;
         };
     };
 
@@ -578,9 +644,9 @@
 
         numpad_sym {
             bindings = <
-  &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE            &multiply           &seven                    &kp NUMBER_8            &kp NUMBER_9            &kp PLUS
-  &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &lt 4 RIGHT_PARENTHESIS    &slashandbackslash  &hm RIGHT_SHIFT NUMBER_4  &hm RIGHT_GUI NUMBER_5  &hm RIGHT_ALT NUMBER_6  &hm RCTRL MINUS
-  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                   &num_0              &kp NUMBER_1              &kp NUMBER_2            &kp NUMBER_3            &equalsgreaterthan
+  &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE            &multiply           &num_7                    &kp NUMBER_8            &kp NUMBER_9            &kp PLUS
+  &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &lt 4 RIGHT_PARENTHESIS    &slashandbackslash  &hm RIGHT_SHIFT &num_4  &hm RIGHT_GUI &num_5  &hm RIGHT_ALT &num_6  &hm RCTRL &quote_minus
+  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                   &num_0              &num_1              &num_2            &num_3            &equalsgreaterthan
                                   &kp GRAVE           &mt LEFT_GUI UNDERSCORE     &trans                     &trans              &trans                    &dot_comma
             >;
         };
