@@ -233,6 +233,52 @@
             mods = <(MOD_LSFT)>;
         };
 
+
+        asacirc: asacirc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "AACIRC";
+            bindings = <&acirc>, <&acirc>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        esecirc: esecirc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EECIRC";
+            bindings = <&ecirc>, <&secirc>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        isicirc: isicirc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "IICIRC";
+            bindings = <&icirc>, <&sicirc>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        osocirc: osocirc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "OOCIRC";
+            bindings = <&ocirc>, <&socirc>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        usucirc: usucirc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UUCIRC";
+            bindings = <&ucirc>, <&sucirc>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
         pressed: pressed {
             compatible = "zmk,behavior-sticky-key";
             label = "PRESSED";
@@ -406,18 +452,18 @@
             label = "THIN_ARROW";
         };
 
-        seacute: seacute {
-            compatible = "zmk,behavior-macro";
-            label = "SEACUTE";
-            #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp LS(E)>;
-        };
-
         saacute: saacute {
             compatible = "zmk,behavior-macro";
             label = "SAACUTE";
             #binding-cells = <0>;
             bindings = <&kp LA(E) &kp LS(A)>;
+        };
+
+        seacute: seacute {
+            compatible = "zmk,behavior-macro";
+            label = "SEACUTE";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E) &kp LS(E)>;
         };
 
         siacute: siacute {
@@ -437,6 +483,41 @@
         suacute: suacute {
             compatible = "zmk,behavior-macro";
             label = "SUACUTE";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E) &kp LS(U)>;
+        };
+
+        sacirc: sacirc {
+            compatible = "zmk,behavior-macro";
+            label = "SACIRC";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E) &kp LS(A)>;
+        };
+
+        secirc: secirc {
+            compatible = "zmk,behavior-macro";
+            label = "SECIRC";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E) &kp LS(E)>;
+        };
+
+        sicirc: sicirc {
+            compatible = "zmk,behavior-macro";
+            label = "SICIRC";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E) &kp LS(I)>;
+        };
+
+        socirc: socirc {
+            compatible = "zmk,behavior-macro";
+            label = "SOCIRC";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E) &kp LS(O)>;
+        };
+
+        sucirc: sucirc {
+            compatible = "zmk,behavior-macro";
+            label = "SUCIRC";
             #binding-cells = <0>;
             bindings = <&kp LA(E) &kp LS(U)>;
         };
@@ -494,8 +575,8 @@
 
         circ {
             bindings = <
-  &trans  &trans  &ecirc  &trans  &trans    &trans  &ucirc  &icirc  &ocirc  &trans
-  &acirc  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &esecirc  &trans  &trans    &trans  &usucirc  &isicirc  &osocirc  &trans
+  &asacirc  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
                   &trans  &trans  &trans    &trans  &trans  &trans
             >;
