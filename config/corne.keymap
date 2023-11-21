@@ -170,9 +170,9 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        divide: multiply {
+        divide: divide {
             compatible = "zmk,behavior-mod-morph";
-            label = "MULTIPLY";
+            label = "divide";
             bindings = <&kp SLASH>, <&kp LEFT_PARENTHESIS>;
 
             #binding-cells = <0>;
