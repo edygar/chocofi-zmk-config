@@ -233,7 +233,6 @@
             mods = <(MOD_LSFT)>;
         };
 
-
         asacirc: asacirc {
             compatible = "zmk,behavior-mod-morph";
             label = "AACIRC";
@@ -279,21 +278,12 @@
             mods = <(MOD_LSFT)>;
         };
 
-        pressed: pressed {
-            compatible = "zmk,behavior-sticky-key";
-            label = "PRESSED";
-            bindings = <&kp>;
-            #binding-cells = <1>;
-            release-after-ms = <200>;
-        };
-
-        thumb_cmd: thumb_cmd {
-            compatible = "zmk,behavior-hold-tap";
-            label = "THUMB_CMD";
-            bindings = <&hold_and_switch>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
+        num_0: num_0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM_0";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp N0>, <&kp LEFT_BRACKET>;
         };
     };
 
@@ -521,13 +511,6 @@
             #binding-cells = <0>;
             bindings = <&kp LA(E) &kp LS(U)>;
         };
-
-        hold_and_switch: hold_and_switch {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mo 10 &pressed LCMD>;
-            label = "HOLD_AND_SWITCH";
-        };
     };
 
     combos {
@@ -558,7 +541,7 @@
   &q_grave     &kp W           &lt 2 E             &lt 1 R           &lt 6 T        &lt 9 Y          &lt 2 U            &lt 1 I              &kp O            &kp P
   &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D      &hm LEFT_SHIFT F  &lt 4 G        &lt 4 H          &hm RIGHT_SHIFT J  &hm LEFT_GUI K       &hm RIGHT_ALT L  &hm_quotes RCTRL 0
   &kp Z        &kp X           &kp C               &kp V             &lt 7 B        &lt 3 N          &kp M              &coma_semi           &dot_colon       &slashandbackslash
-                               &lt 8 LEFT_BRACKET  &thumb_cmd 0 TAB  &lt 5 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER        &lt 6 RIGHT_BRACKET
+                               &lt 8 LEFT_BRACKET  &mt LEFT_GUI TAB  &lt 5 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER        &lt 6 RIGHT_BRACKET
             >;
         };
 
@@ -575,10 +558,10 @@
 
         circ {
             bindings = <
-  &trans  &trans  &esecirc  &trans  &trans    &trans  &usucirc  &isicirc  &osocirc  &trans
-  &asacirc  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans    &trans  &trans  &trans
+  &trans    &trans  &esecirc  &trans  &trans    &trans  &usucirc  &isicirc  &osocirc  &trans
+  &asacirc  &trans  &trans    &trans  &trans    &trans  &trans    &trans    &trans    &trans
+  &trans    &trans  &trans    &trans  &trans    &trans  &trans    &trans    &trans    &trans
+                    &trans    &trans  &trans    &trans  &trans    &trans
             >;
 
             label = "circ";
@@ -597,7 +580,7 @@
             bindings = <
   &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE            &multiply           &seven                    &kp NUMBER_8            &kp NUMBER_9            &kp PLUS
   &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &lt 4 RIGHT_PARENTHESIS    &slashandbackslash  &hm RIGHT_SHIFT NUMBER_4  &hm RIGHT_GUI NUMBER_5  &hm RIGHT_ALT NUMBER_6  &hm RCTRL MINUS
-  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                   &kp NUMBER_0        &kp NUMBER_1              &kp NUMBER_2            &kp NUMBER_3            &equalsgreaterthan
+  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                   &num_0              &kp NUMBER_1              &kp NUMBER_2            &kp NUMBER_3            &equalsgreaterthan
                                   &kp GRAVE           &mt LEFT_GUI UNDERSCORE     &trans                     &trans              &trans                    &dot_comma
             >;
         };
@@ -644,15 +627,6 @@
   &sys_reset   &kp F4  &kp F5        &kp F6        &kp F12       &trans  &trans  &trans  &trans  &trans
   &kp K_LOCK   &kp F1  &kp F2        &kp F3        &kp F12       &trans  &trans  &trans  &trans  &trans
                        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR    &trans  &trans  &trans
-            >;
-        };
-
-        sym_num {
-            bindings = <
-  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp LEFT_BRACE          &kp RIGHT_BRACE              &kp CARET           &kp DOLLAR        &kp EXCLAMATION
-  &trans        &trans        &trans        &trans        &trans    &lt 4 LEFT_PARENTHESIS  &hm LSHFT RIGHT_PARENTHESIS  &hm LGUI AMPERSAND  &hm LALT PIPE     &hm LCTRL AT
-  &trans        &trans        &trans        &trans        &trans    &kp LEFT_BRACKET        &kp RIGHT_BRACKET            &kp HASH            &kp RS(ASTERISK)  &kp PERCENT
-                              &trans        &trans        &trans    &trans                  &trans                       &trans
             >;
         };
     };
