@@ -352,7 +352,7 @@
             mods = <(MOD_LSFT)>;
         };
 
-        ALWAYS_TILDE: ALWAYS_TILDE {
+        always_tilde: always_tilde {
             compatible = "zmk,behavior-mod-morph";
             label = "ALWAYS_TILDE";
             bindings = <&kp LA(N)>, <&kp LA(N)>;
@@ -370,13 +370,31 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        e_euro: e_euro {
+        w_euro: w_euro {
             compatible = "zmk,behavior-mod-morph";
-            label = "E_EURO";
-            bindings = <&lt 2 E>, <&kp LS(LA(NUMBER_2))>;
+            label = "W_EURO";
+            bindings = <&kp W>, <&kp LS(LA(NUMBER_2))>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        a_grave_ctrl: a_grave_ctrl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "A_GRAVE_CTRL";
+            bindings = <&hm LCTRL A>, <&kp A>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        always_grave: always_grave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALWAYS_GRAVE";
+            bindings = <&kp GRAVE>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -462,21 +480,21 @@
             compatible = "zmk,behavior-macro";
             label = "OTILDE";
             #binding-cells = <0>;
-            bindings = <&ALWAYS_TILDE &kp O>;
+            bindings = <&always_tilde &kp O>;
         };
 
         ao: ao {
             compatible = "zmk,behavior-macro";
             label = "AO";
             #binding-cells = <0>;
-            bindings = <&ALWAYS_TILDE &kp A &kp O>;
+            bindings = <&always_tilde &kp A &kp O>;
         };
 
         oes: oes {
             compatible = "zmk,behavior-macro";
             label = "OES";
             #binding-cells = <0>;
-            bindings = <&ALWAYS_TILDE &kp O &kp E &kp S>;
+            bindings = <&always_tilde &kp O &kp E &kp S>;
         };
 
         vim_word: vim_word {
@@ -504,7 +522,7 @@
             compatible = "zmk,behavior-macro";
             label = "AES";
             #binding-cells = <0>;
-            bindings = <&ALWAYS_TILDE &kp A &kp E &kp S>;
+            bindings = <&always_tilde &kp A &kp E &kp S>;
         };
 
         esc_0: esc_0 {
@@ -604,6 +622,13 @@
             #binding-cells = <0>;
             bindings = <&kp LA(E) &kp LS(U)>;
         };
+
+        agrave: agrave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&always_grave &kp A>;
+            label = "AGRAVE";
+        };
     };
 
     combos {
@@ -631,7 +656,7 @@
         default_layer {
             label = "DEF";
             bindings = <
-  &q_grave     &kp W           &e_euro         &lt 1 R           &lt 6 T        &lt 9 Y          &lt 2 U            &lt 1 I         &kp O            &kp P
+  &q_grave     &w_euro         &lt 2 E         &lt 1 R           &lt 6 T        &lt 9 Y          &lt 2 U            &lt 1 I         &kp O            &kp P
   &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D  &hm LEFT_SHIFT F  &lt 4 G        &lt 4 H          &hm RIGHT_SHIFT J  &hm LEFT_GUI K  &hm RIGHT_ALT L  &hm_quotes RCTRL 0
   &kp Z        &kp X           &kp C           &kp V             &lt 7 B        &lt 3 N          &kp M              &coma_semi      &dot_colon       &slashandbackslash
                                &lt 8 ESCAPE    &mt LEFT_GUI TAB  &lt 5 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER        &lt 6 ESCAPE
@@ -671,9 +696,9 @@
 
         numpad_sym {
             bindings = <
-  &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE          &multiply  &num_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
-  &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &divide    &num_4  &num_5        &num_6        &hm_quote_minus
-  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                 &num_0     &num_1  &num_2        &num_3        &equalsgreaterthan
+  &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE          &multiply  &num_7  &num_8      &kp NUMBER_9  &kp PLUS
+  &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &divide    &num_4  &num_5      &num_6        &hm_quote_minus
+  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                 &num_0     &num_1  &num_2      &num_3        &equalsgreaterthan
                                   &kp GRAVE           &mt LEFT_GUI UNDERSCORE     &trans                   &trans     &trans  &dot_comma
             >;
         };
