@@ -203,7 +203,7 @@
             bindings = <&aacute>, <&aacute>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         eseacute: eseacute {
@@ -212,7 +212,7 @@
             bindings = <&eacute>, <&seacute>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         isiacute: isiacute {
@@ -221,7 +221,7 @@
             bindings = <&iacute>, <&siacute>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         osoacute: osoacute {
@@ -230,7 +230,7 @@
             bindings = <&oacute>, <&soacute>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         usuacute: usuacute {
@@ -239,7 +239,7 @@
             bindings = <&uacute>, <&suacute>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         asacirc: asacirc {
@@ -248,7 +248,7 @@
             bindings = <&acirc>, <&acirc>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         esecirc: esecirc {
@@ -257,7 +257,7 @@
             bindings = <&ecirc>, <&secirc>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         isicirc: isicirc {
@@ -266,7 +266,7 @@
             bindings = <&icirc>, <&sicirc>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         osocirc: osocirc {
@@ -275,7 +275,7 @@
             bindings = <&ocirc>, <&socirc>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         usucirc: usucirc {
@@ -284,7 +284,7 @@
             bindings = <&ucirc>, <&sucirc>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         num_0: num_0 {
@@ -350,6 +350,33 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
+        };
+
+        ALWAYS_TILDE: ALWAYS_TILDE {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALWAYS_TILDE";
+            bindings = <&kp LA(N)>, <&kp LA(N)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        num_8: num_8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM_8";
+            bindings = <&kp N8>, <&kp LA(LS(NUMBER_2))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        e_euro: e_euro {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_EURO";
+            bindings = <&lt 2 E>, <&kp LS(LA(NUMBER_2))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
     };
 
@@ -435,21 +462,21 @@
             compatible = "zmk,behavior-macro";
             label = "OTILDE";
             #binding-cells = <0>;
-            bindings = <&kp LA(N) &kp O>;
+            bindings = <&ALWAYS_TILDE &kp O>;
         };
 
         ao: ao {
             compatible = "zmk,behavior-macro";
             label = "AO";
             #binding-cells = <0>;
-            bindings = <&kp LA(N) &kp A &kp O>;
+            bindings = <&ALWAYS_TILDE &kp A &kp O>;
         };
 
         oes: oes {
             compatible = "zmk,behavior-macro";
             label = "OES";
             #binding-cells = <0>;
-            bindings = <&kp LA(N) &kp O &kp E &kp S>;
+            bindings = <&ALWAYS_TILDE &kp O &kp E &kp S>;
         };
 
         vim_word: vim_word {
@@ -477,7 +504,7 @@
             compatible = "zmk,behavior-macro";
             label = "AES";
             #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp A &kp E &kp S>;
+            bindings = <&ALWAYS_TILDE &kp A &kp E &kp S>;
         };
 
         esc_0: esc_0 {
@@ -604,10 +631,10 @@
         default_layer {
             label = "DEF";
             bindings = <
-  &q_grave     &kp W           &lt 2 E             &lt 1 R           &lt 6 T        &lt 9 Y          &lt 2 U            &lt 1 I              &kp O            &kp P
-  &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D      &hm LEFT_SHIFT F  &lt 4 G        &lt 4 H          &hm RIGHT_SHIFT J  &hm LEFT_GUI K       &hm RIGHT_ALT L  &hm_quotes RCTRL 0
-  &kp Z        &kp X           &kp C               &kp V             &lt 7 B        &lt 3 N          &kp M              &coma_semi           &dot_colon       &slashandbackslash
-                               &lt 8 LEFT_BRACKET  &mt LEFT_GUI TAB  &lt 5 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER        &lt 6 RIGHT_BRACKET
+  &q_grave     &kp W           &e_euro         &lt 1 R           &lt 6 T        &lt 9 Y          &lt 2 U            &lt 1 I         &kp O            &kp P
+  &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D  &hm LEFT_SHIFT F  &lt 4 G        &lt 4 H          &hm RIGHT_SHIFT J  &hm LEFT_GUI K  &hm RIGHT_ALT L  &hm_quotes RCTRL 0
+  &kp Z        &kp X           &kp C           &kp V             &lt 7 B        &lt 3 N          &kp M              &coma_semi      &dot_colon       &slashandbackslash
+                               &lt 8 ESCAPE    &mt LEFT_GUI TAB  &lt 5 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER        &lt 6 ESCAPE
             >;
         };
 
