@@ -324,6 +324,86 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
         };
+
+        cmd_num_4: cmd_num_4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CMD_NUM_4";
+            bindings = <&num_4>, <&kp NUMBER_4>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_RGUI|MOD_LGUI)>;
+        };
+
+        cmd_num_5: cmd_num_5 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CMD_NUM_5";
+            bindings = <&num_5>, <&kp N5>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_RGUI|MOD_LGUI)>;
+        };
+
+        cmd_num_1: cmd_num_1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CMD_NUM_1";
+            bindings = <&num_1>, <&kp NUMBER_1>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_RGUI|MOD_LGUI)>;
+        };
+
+        cmd_num_3: cmd_num_3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CMD_NUM_3";
+            bindings = <&num_3>, <&kp NUMBER_3>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_RGUI|MOD_LGUI)>;
+        };
+
+        cmd_num_2: cmd_num_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CMD_NUM_2";
+            bindings = <&num_2>, <&kp NUMBER_2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_RGUI|MOD_LGUI)>;
+        };
+
+        cmd_num_6: cmd_num_6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CMD_NUM_6";
+            bindings = <&num_6>, <&kp NUMBER_6>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_RGUI|MOD_LGUI)>;
+        };
+
+        cmd_num_7: cmd_num_7 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CMD_NUM_7";
+            bindings = <&num_7>, <&kp N7>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_RGUI|MOD_LGUI)>;
+        };
+
+        cmd_num_8: cmd_num_8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CMD_NUM_8";
+            bindings = <&num_8>, <&kp N8>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_RGUI|MOD_LGUI)>;
+        };
     };
 
     macros {
@@ -554,10 +634,10 @@
 
         numpad_sym {
             bindings = <
-  &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE          &multiply  &num_7  &num_8      &kp NUMBER_9  &kp PLUS
-  &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &divide    &num_4  &num_5      &num_6        &hm_quote_minus
-  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                 &num_0     &num_1  &num_2      &num_3        &equalsgreaterthan
-                                  &kp GRAVE           &mt LEFT_GUI UNDERSCORE     &trans                   &trans     &trans  &dot_comma
+  &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE          &multiply  &cmd_num_7  &cmd_num_8  &kp NUMBER_9  &kp PLUS
+  &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &divide    &cmd_num_4  &cmd_num_5  &cmd_num_6    &hm_quote_minus
+  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                 &num_0     &cmd_num_1  &cmd_num_2  &num_3        &equalsgreaterthan
+                                  &kp GRAVE           &mt LEFT_GUI UNDERSCORE     &trans                   &trans     &trans      &dot_comma
             >;
         };
 
