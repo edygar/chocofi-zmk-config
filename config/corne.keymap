@@ -197,96 +197,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        asaacute: asaacute {
-            compatible = "zmk,behavior-mod-morph";
-            label = "AAACUTE";
-            bindings = <&aacute>, <&aacute>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        eseacute: eseacute {
-            compatible = "zmk,behavior-mod-morph";
-            label = "EEACUTE";
-            bindings = <&eacute>, <&seacute>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        isiacute: isiacute {
-            compatible = "zmk,behavior-mod-morph";
-            label = "IIACUTE";
-            bindings = <&iacute>, <&siacute>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        osoacute: osoacute {
-            compatible = "zmk,behavior-mod-morph";
-            label = "OOACUTE";
-            bindings = <&oacute>, <&soacute>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        usuacute: usuacute {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UUACUTE";
-            bindings = <&uacute>, <&suacute>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        asacirc: asacirc {
-            compatible = "zmk,behavior-mod-morph";
-            label = "AACIRC";
-            bindings = <&acirc>, <&acirc>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        esecirc: esecirc {
-            compatible = "zmk,behavior-mod-morph";
-            label = "EECIRC";
-            bindings = <&ecirc>, <&secirc>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        isicirc: isicirc {
-            compatible = "zmk,behavior-mod-morph";
-            label = "IICIRC";
-            bindings = <&icirc>, <&sicirc>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        osocirc: osocirc {
-            compatible = "zmk,behavior-mod-morph";
-            label = "OOCIRC";
-            bindings = <&ocirc>, <&socirc>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        usucirc: usucirc {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UUCIRC";
-            bindings = <&ucirc>, <&sucirc>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         num_0: num_0 {
             compatible = "zmk,behavior-mod-morph";
             label = "NUM_0";
@@ -396,6 +306,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        always_acute: always_acute {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALWAYS_ACUTE";
+            bindings = <&kp LA(E)>, <&kp LA(E)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        always_circ: always_circ {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALWAYS_CIRC";
+            bindings = <&kp LA(E)>, <&kp LA(E)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
     };
 
     macros {
@@ -403,77 +331,77 @@
             compatible = "zmk,behavior-macro";
             label = "AACUTE";
             #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp A>;
+            bindings = <&always_acute &kp A>;
         };
 
         eacute: eacute {
             compatible = "zmk,behavior-macro";
             label = "EACUTE";
             #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp E>;
+            bindings = <&always_acute &kp E>;
         };
 
         iacute: iacute {
             compatible = "zmk,behavior-macro";
             label = "IACUTE";
             #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp I>;
+            bindings = <&always_acute &kp I>;
         };
 
         oacute: oacute {
             compatible = "zmk,behavior-macro";
             label = "OACUTE";
             #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp O>;
+            bindings = <&always_acute &kp O>;
         };
 
         uacute: uacute {
             compatible = "zmk,behavior-macro";
             label = "UACUTE";
             #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp U>;
+            bindings = <&always_acute &kp U>;
         };
 
         acirc: acirc {
             compatible = "zmk,behavior-macro";
             label = "ACIRC";
             #binding-cells = <0>;
-            bindings = <&kp LA(I) &kp A>;
+            bindings = <&always_circ &kp A>;
         };
 
         ecirc: ecirc {
             compatible = "zmk,behavior-macro";
             label = "ECIRC";
             #binding-cells = <0>;
-            bindings = <&kp LA(I) &kp E>;
+            bindings = <&always_circ &kp E>;
         };
 
         icirc: icirc {
             compatible = "zmk,behavior-macro";
             label = "ICIRC";
             #binding-cells = <0>;
-            bindings = <&kp LA(I) &kp I>;
+            bindings = <&always_circ &kp I>;
         };
 
         ocirc: ocirc {
             compatible = "zmk,behavior-macro";
             label = "OCIRC";
             #binding-cells = <0>;
-            bindings = <&kp LA(I) &kp O>;
+            bindings = <&always_circ &kp O>;
         };
 
         ucirc: ucirc {
             compatible = "zmk,behavior-macro";
             label = "UCIRC";
             #binding-cells = <0>;
-            bindings = <&kp LA(I) &kp U>;
+            bindings = <&always_circ &kp U>;
         };
 
         atilde: atilde {
             compatible = "zmk,behavior-macro";
             label = "ATILDE";
             #binding-cells = <0>;
-            bindings = <&kp LA(N) &kp A>;
+            bindings = <&always_tilde &kp A>;
         };
 
         otilde: otilde {
@@ -553,76 +481,6 @@
             label = "THIN_ARROW";
         };
 
-        saacute: saacute {
-            compatible = "zmk,behavior-macro";
-            label = "SAACUTE";
-            #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp LS(A)>;
-        };
-
-        seacute: seacute {
-            compatible = "zmk,behavior-macro";
-            label = "SEACUTE";
-            #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp LS(E)>;
-        };
-
-        siacute: siacute {
-            compatible = "zmk,behavior-macro";
-            label = "SIACUTE";
-            #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp LS(I)>;
-        };
-
-        soacute: soacute {
-            compatible = "zmk,behavior-macro";
-            label = "SOACUTE";
-            #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp LS(O)>;
-        };
-
-        suacute: suacute {
-            compatible = "zmk,behavior-macro";
-            label = "SUACUTE";
-            #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp LS(U)>;
-        };
-
-        sacirc: sacirc {
-            compatible = "zmk,behavior-macro";
-            label = "SACIRC";
-            #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp LS(A)>;
-        };
-
-        secirc: secirc {
-            compatible = "zmk,behavior-macro";
-            label = "SECIRC";
-            #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp LS(E)>;
-        };
-
-        sicirc: sicirc {
-            compatible = "zmk,behavior-macro";
-            label = "SICIRC";
-            #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp LS(I)>;
-        };
-
-        socirc: socirc {
-            compatible = "zmk,behavior-macro";
-            label = "SOCIRC";
-            #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp LS(O)>;
-        };
-
-        sucirc: sucirc {
-            compatible = "zmk,behavior-macro";
-            label = "SUCIRC";
-            #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp LS(U)>;
-        };
-
         agrave: agrave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -665,10 +523,10 @@
 
         acute {
             bindings = <
-  &trans     &trans  &eseacute  &trans  &trans    &trans  &usuacute  &isiacute  &osoacute  &trans
-  &asaacute  &trans  &trans     &trans  &trans    &trans  &trans     &trans     &trans     &trans
-  &trans     &trans  &trans     &trans  &trans    &trans  &trans     &trans     &trans     &trans
-                     &trans     &trans  &trans    &trans  &trans     &trans
+  &trans   &trans  &eacute  &trans  &trans    &trans  &uacute  &iacute  &oacute  &trans
+  &aacute  &trans  &trans   &trans  &trans    &trans  &trans   &trans   &trans   &trans
+  &trans   &trans  &trans   &trans  &trans    &trans  &trans   &trans   &trans   &trans
+                   &trans   &trans  &trans    &trans  &trans   &trans
             >;
 
             label = "acute";
@@ -676,10 +534,10 @@
 
         circ {
             bindings = <
-  &trans    &trans  &esecirc  &trans  &trans    &trans  &usucirc  &isicirc  &osocirc  &trans
-  &asacirc  &trans  &trans    &trans  &trans    &trans  &trans    &trans    &trans    &trans
-  &trans    &trans  &trans    &trans  &trans    &trans  &trans    &trans    &trans    &trans
-                    &trans    &trans  &trans    &trans  &trans    &trans
+  &trans  &trans  &ecirc  &trans  &trans    &trans  &ucirc  &icirc  &ocirc  &trans
+  &acirc  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
             label = "circ";
