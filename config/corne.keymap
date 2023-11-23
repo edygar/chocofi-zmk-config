@@ -12,7 +12,7 @@
 #define DEFAULT_L 0
 
 &lt {
-    quick_tap_ms = <200>;
+    quick-tap-ms = <200>;
 };
 
 / {
