@@ -319,7 +319,7 @@
         always_circ: always_circ {
             compatible = "zmk,behavior-mod-morph";
             label = "ALWAYS_CIRC";
-            bindings = <&kp LA(E)>, <&kp LA(E)>;
+            bindings = <&kp LA(I)>, <&kp LA(I)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
