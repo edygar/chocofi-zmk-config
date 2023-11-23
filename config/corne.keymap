@@ -313,7 +313,7 @@
             bindings = <&kp LA(E)>, <&kp LA(E)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
+            mods = <(MOD_LALT|MOD_LSFT|MOD_RSFT)>;
         };
 
         always_circ: always_circ {
@@ -413,6 +413,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LSFT|MOD_RCTL|MOD_RSFT)>;
             keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RALT|MOD_RGUI|MOD_RSFT|MOD_RCTL)>;
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NEW_BEHAVIOR";
+            bindings = <&kp LA(I)>, <&kp LA(I)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
     };
 
