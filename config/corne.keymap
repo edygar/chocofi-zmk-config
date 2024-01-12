@@ -26,10 +26,11 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <200>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <200>;
         };
 
         vim_i: vim_i {
@@ -148,7 +149,7 @@
             bindings = <&kp>, <&quote_grave>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
         };
