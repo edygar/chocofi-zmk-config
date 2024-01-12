@@ -426,16 +426,6 @@
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
-        space_vim: space_vim {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SPACE_VIM";
-            bindings = <&lt>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
         shift_tap: shift_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "SHIFT_TAP";
@@ -635,10 +625,10 @@
         default_layer {
             label = "DEF";
             bindings = <
-  &q_grave     &cmd_w_euro     &lt 2 E             &lt 1 R                  &lt 6 T               &lt 9 Y          &lt 2 U                   &lt 1 I              &kp O            &kp P
-  &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D      &shift_tap LEFT_SHIFT F  &lt 4 G               &lt 4 H          &shift_tap RIGHT_SHIFT J  &hm LEFT_GUI K       &hm RIGHT_ALT L  &hm_quotes RCTRL 0
-  &kp Z        &kp X           &kp C               &kp V                    &lt 7 B               &lt 3 N          &kp M                     &coma_semi           &dot_colon       &slashandbackslash
-                               &lt 8 LEFT_BRACKET  &hm LEFT_GUI TAB         &space_vim 5 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER               &lt 6 RIGHT_BRACKET
+  &q_grave     &cmd_w_euro     &lt 2 E             &lt 1 R                  &lt 6 T        &lt 9 Y          &lt 2 U                   &lt 1 I              &kp O            &kp P
+  &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D      &shift_tap LEFT_SHIFT F  &lt 4 G        &lt 4 H          &shift_tap RIGHT_SHIFT J  &hm LEFT_GUI K       &hm RIGHT_ALT L  &hm_quotes RCTRL 0
+  &kp Z        &kp X           &kp C               &kp V                    &lt 7 B        &lt 3 N          &kp M                     &coma_semi           &dot_colon       &slashandbackslash
+                               &lt 8 LEFT_BRACKET  &hm LEFT_GUI TAB         &lt 5 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER               &lt 6 RIGHT_BRACKET
             >;
         };
 
