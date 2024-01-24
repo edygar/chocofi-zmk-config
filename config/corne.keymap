@@ -610,14 +610,14 @@
         gte: gte {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp GT &kp LT &kp EQUAL>;
+            bindings = <&kp GT &kp EQUAL>;
             label = "GTE";
         };
 
         lte: lte {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp GT &kp EQUAL>;
+            bindings = <&kp LT &kp EQUAL>;
             label = "LTE";
         };
     };
