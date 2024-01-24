@@ -17,9 +17,7 @@
 };
 
 / {
-    chosen {
-        zmk,matrix_transform = &five_column_transform;
-    };
+    chosen { zmk,matrix_transform = &five_column_transform; };
 
     behaviors {
         hm: homerow_mods {
@@ -190,9 +188,9 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        equalsgreaterthan: equalsgreaterthan {
+        equals_thic_arrow: equals_thic_arrow {
             compatible = "zmk,behavior-mod-morph";
-            label = "EQUALSGREATERTHAN";
+            label = "EQUALS_THIC_ARROW";
             bindings = <&kp EQUAL>, <&thic_arrow>;
 
             #binding-cells = <0>;
@@ -324,7 +322,7 @@
             bindings = <&kp LA(I)>, <&kp LA(I)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         cmd_num_4: cmd_num_4 {
@@ -417,15 +415,6 @@
             keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RALT|MOD_RGUI|MOD_RSFT|MOD_RCTL)>;
         };
 
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NEW_BEHAVIOR";
-            bindings = <&kp LA(I)>, <&kp LA(I)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-
         shift_tap: shift_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "SHIFT_TAP";
@@ -435,6 +424,24 @@
             tapping-term-ms = <150>;
             flavor = "tap-preferred";
             quick-tap-ms = <200>;
+        };
+
+        plus_gte: plus_gte {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PLUS_GTE";
+            bindings = <&kp PLUS>, <&gte>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        minus_lte: minus_lte {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MINUS_LTE";
+            bindings = <&kp MINUS>, <&lte>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -599,6 +606,20 @@
             bindings = <&always_grave &kp A>;
             label = "AGRAVE";
         };
+
+        gte: gte {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp GT &kp LT &kp EQUAL>;
+            label = "GTE";
+        };
+
+        lte: lte {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GT &kp EQUAL>;
+            label = "LTE";
+        };
     };
 
     combos {
@@ -666,9 +687,9 @@
 
         numpad_sym {
             bindings = <
-  &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE          &multiply  &cmd_num_7  &cmd_num_8  &kp NUMBER_9  &kp PLUS
-  &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &divide    &cmd_num_4  &cmd_num_5  &cmd_num_6    &hm_quote_minus
-  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                 &num_0     &cmd_num_1  &cmd_num_2  &num_3        &equalsgreaterthan
+  &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE          &multiply  &cmd_num_7  &cmd_num_8  &kp NUMBER_9  &plus_gte
+  &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &divide    &cmd_num_4  &cmd_num_5  &cmd_num_6    &minus_lte
+  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                 &num_0     &cmd_num_1  &cmd_num_2  &num_3        &equals_thic_arrow
                                   &kp GRAVE           &mt LEFT_GUI UNDERSCORE     &trans                   &trans     &trans      &dot_comma
             >;
         };
