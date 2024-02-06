@@ -639,6 +639,11 @@
             bindings = <&esc_0>;
             key-positions = <14 15>;
         };
+
+        practice_dvorak {
+            bindings = <&to 10>;
+            key-positions = <30 31 32>;
+        };
     };
 
     keymap {
@@ -736,6 +741,15 @@
   &sys_reset   &kp F4  &kp F5        &kp F6        &kp F12       &trans  &trans  &trans  &trans  &trans
   &kp K_LOCK   &kp F1  &kp F2        &kp F3        &kp F12       &trans  &trans  &trans  &trans  &trans
                        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR    &trans  &trans  &trans
+            >;
+        };
+
+        layer_10 {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp SEMICOLON
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
