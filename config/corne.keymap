@@ -443,6 +443,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NEW_BEHAVIOR";
+            bindings = <&kp DOT>, <&kp QUESTION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
     };
 
     macros {
@@ -746,10 +755,10 @@
 
         layer_10 {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp SEMICOLON
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans    &trans  &trans  &trans
+  &kp APOS     &kp COMMA       &kp DOT     &kp P                &kp Y      &kp F    &kp G                     &kp C       &kp R            &kp L
+  &hm LCTRL A  &hm LEFT_ALT O  &hm LGUI E  &shift_tap LSHIFT U  &lt 6 I    &lt 6 D  &shift_tap RIGHT_SHIFT H  &hm RGUI T  &hm RIGHT_ALT N  &hm RCTRL S
+  &kp SEMI     &kp Q           &kp J       &kp K                &kp X      &kp B    &kp M                     &kp W       &kp V            &kp Z
+                               &trans      &trans               &trans     &trans   &trans                    &trans
             >;
         };
     };
