@@ -447,7 +447,7 @@
         p_question: p_question {
             compatible = "zmk,behavior-mod-morph";
             label = "P_QUESTION";
-            bindings = <&kp DOT>, <&kp QUESTION>;
+            bindings = <&kp P>, <&kp QUESTION>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
