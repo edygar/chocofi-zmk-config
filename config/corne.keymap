@@ -452,6 +452,13 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
         };
+
+        switch_layout: switch_layout {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SWITCH_LAYOUT";
+            #binding-cells = <0>;
+            bindings = <&to 1>, <&to 0>;
+        };
     };
 
     macros {
@@ -649,9 +656,14 @@
             key-positions = <14 15>;
         };
 
-        practice_dvorak {
-            bindings = <&to 1>;
-            key-positions = <30 31 32>;
+        dvorak {
+            bindings = <&switch_layout>;
+            key-positions = <10 11 12 13>;
+        };
+
+        qwerty {
+            bindings = <&switch_layout>;
+            key-positions = <16 18 17 19>;
         };
     };
 
@@ -670,8 +682,8 @@
 
         DVORAK {
             bindings = <
-  &quote_grave  &coma_semi      &dot_colon  &kp P                &kp Y      &kp F    &kp G                     &kp C       &kp R            &kp L
-  &hm LCTRL A   &hm LEFT_ALT O  &hm LGUI E  &shift_tap LSHIFT U  &lt 7 I    &lt 7 D  &shift_tap RIGHT_SHIFT H  &hm RGUI T  &hm RIGHT_ALT N  &hm RCTRL S
+  &quote_grave  &coma_semi      &dot_colon  &p_question          &kp Y      &kp F    &lt 14 G                  &lt 11 C    &lt 12 R         &lt 13 L
+  &hm LCTRL A   &hm LEFT_ALT O  &hm LGUI E  &shift_tap LSHIFT U  &lt 5 I    &lt 5 D  &shift_tap RIGHT_SHIFT H  &hm RGUI T  &hm RIGHT_ALT N  &hm RCTRL S
   &kp ESC       &kp Q           &kp J       &kp K                &kp X      &kp B    &kp M                     &kp W       &kp V            &kp Z
                                 &trans      &trans               &trans     &trans   &trans                    &trans
             >;
@@ -759,6 +771,43 @@
   &sys_reset   &kp F4  &kp F5        &kp F6        &kp F12       &trans  &trans  &trans  &trans  &trans
   &kp K_LOCK   &kp F1  &kp F2        &kp F3        &kp F12       &trans  &trans  &trans  &trans  &trans
                        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR    &trans  &trans  &trans
+            >;
+        };
+
+        dvorak_acute {
+            label = "dvorak_acute";
+            bindings = <
+  &trans   &trans   &trans   &trans   &trans     &trans  &trans  &trans  &trans  &trans
+  &aacute  &oacute  &eacute  &uacute  &iacute    &trans  &trans  &trans  &trans  &trans
+  &trans   &trans   &trans   &trans   &trans     &trans  &trans  &trans  &trans  &trans
+                    &trans   &trans   &trans     &trans  &trans  &trans
+            >;
+        };
+
+        dvorak_circ {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &acirc  &ocirc  &ecirc  &ucirc  &icirc    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        dvorak_tilde {
+            bindings = <
+  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &atilde  &oes    &aes    &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                   &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        grave {
+            bindings = <
+  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &agrave  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                   &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
