@@ -444,9 +444,9 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        new_behavior: new_behavior {
+        p_question: p_question {
             compatible = "zmk,behavior-mod-morph";
-            label = "NEW_BEHAVIOR";
+            label = "P_QUESTION";
             bindings = <&kp DOT>, <&kp QUESTION>;
 
             #binding-cells = <0>;
@@ -650,7 +650,7 @@
         };
 
         practice_dvorak {
-            bindings = <&to 10>;
+            bindings = <&to 1>;
             key-positions = <30 31 32>;
         };
     };
@@ -661,10 +661,19 @@
         default_layer {
             label = "DEF";
             bindings = <
-  &q_grave     &cmd_w_euro     &lt 2 E             &lt 1 R                  &lt 6 T        &lt 9 Y          &lt 2 U                   &lt 1 I              &kp O            &kp P
-  &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D      &shift_tap LEFT_SHIFT F  &lt 4 G        &lt 4 H          &shift_tap RIGHT_SHIFT J  &hm LEFT_GUI K       &hm RIGHT_ALT L  &hm_quotes RCTRL 0
-  &kp Z        &kp X           &kp C               &kp V                    &lt 7 B        &lt 3 N          &kp M                     &coma_semi           &dot_colon       &slashandbackslash
-                               &lt 8 LEFT_BRACKET  &hm LEFT_GUI TAB         &lt 5 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER               &lt 6 RIGHT_BRACKET
+  &q_grave     &cmd_w_euro     &lt 3 E             &lt 2 R                  &lt 7 T        &lt 10 Y         &lt 3 U                   &lt 2 I              &kp O            &kp P
+  &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D      &shift_tap LEFT_SHIFT F  &lt 5 G        &lt 5 H          &shift_tap RIGHT_SHIFT J  &hm LEFT_GUI K       &hm RIGHT_ALT L  &hm_quotes RCTRL 0
+  &kp Z        &kp X           &kp C               &kp V                    &lt 8 B        &lt 4 N          &kp M                     &coma_semi           &dot_colon       &slashandbackslash
+                               &lt 9 LEFT_BRACKET  &hm LEFT_GUI TAB         &lt 6 SPACE    &lt 6 BACKSPACE  &lt 5 ENTER               &lt 7 RIGHT_BRACKET
+            >;
+        };
+
+        DVORAK {
+            bindings = <
+  &quote_grave  &coma_semi      &dot_colon  &kp P                &kp Y      &kp F    &kp G                     &kp C       &kp R            &kp L
+  &hm LCTRL A   &hm LEFT_ALT O  &hm LGUI E  &shift_tap LSHIFT U  &lt 7 I    &lt 7 D  &shift_tap RIGHT_SHIFT H  &hm RGUI T  &hm RIGHT_ALT N  &hm RCTRL S
+  &kp ESC       &kp Q           &kp J       &kp K                &kp X      &kp B    &kp M                     &kp W       &kp V            &kp Z
+                                &trans      &trans               &trans     &trans   &trans                    &trans
             >;
         };
 
@@ -750,15 +759,6 @@
   &sys_reset   &kp F4  &kp F5        &kp F6        &kp F12       &trans  &trans  &trans  &trans  &trans
   &kp K_LOCK   &kp F1  &kp F2        &kp F3        &kp F12       &trans  &trans  &trans  &trans  &trans
                        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR    &trans  &trans  &trans
-            >;
-        };
-
-        layer_10 {
-            bindings = <
-  &kp APOS     &kp COMMA       &kp DOT     &kp P                &kp Y      &kp F    &kp G                     &kp C       &kp R            &kp L
-  &hm LCTRL A  &hm LEFT_ALT O  &hm LGUI E  &shift_tap LSHIFT U  &lt 6 I    &lt 6 D  &shift_tap RIGHT_SHIFT H  &hm RGUI T  &hm RIGHT_ALT N  &hm RCTRL S
-  &kp SEMI     &kp Q           &kp J       &kp K                &kp X      &kp B    &kp M                     &kp W       &kp V            &kp Z
-                               &trans      &trans               &trans     &trans   &trans                    &trans
             >;
         };
     };
