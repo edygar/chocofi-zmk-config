@@ -672,10 +672,10 @@
 
         DVORAK {
             bindings = <
-  &quote_grave  &coma_semi      &dot_colon  &p_question          &kp Y      &kp F    &lt 14 G                  &lt 11 C    &lt 12 R         &lt 13 L
-  &hm LCTRL A   &hm LEFT_ALT O  &hm LGUI E  &shift_tap LSHIFT U  &lt 5 I    &lt 5 D  &shift_tap RIGHT_SHIFT H  &hm RGUI T  &hm RIGHT_ALT N  &hm RCTRL S
-  &kp ESC       &kp Q           &kp J       &kp K                &kp X      &kp B    &kp M                     &kp W       &kp V            &kp Z
-                                &trans      &trans               &trans     &trans   &trans                    &trans
+  &kp B  &kp L  &kp D   &kp W   &kp Z     &kp SQT  &kp F   &kp O      &kp U    &kp J
+  &kp N  &kp R  &kp T   &kp S   &kp G     &kp Y    &kp H   &kp A      &kp E    &kp I
+  &kp Q  &kp X  &kp M   &kp C   &kp V     &kp K    &kp P   &kp COMMA  &kp DOT  &kp FSLH
+                &trans  &trans  &trans    &trans   &trans  &trans
             >;
         };
 
