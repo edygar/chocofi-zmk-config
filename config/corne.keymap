@@ -673,7 +673,7 @@
         graphite {
             bindings = <
   &kp B        &kp L       &kp D           &kp W                    &kp Z      &kp SQT  &kp F                     &kp O       &kp U       &kp J
-  &hm LCTRL N  &hm LALT R  &hm LEFT_GUI T  &shift_tap LEFT_SHIFT S  &lt 5 G    &lt 5 Y  &shift_tap RIGHT_SHIFT R  &hm RGUI A  &hm RALT E  &hm RCTRL I
+  &hm LCTRL N  &hm LALT R  &hm LEFT_GUI T  &shift_tap LEFT_SHIFT S  &lt 5 G    &lt 5 Y  &shift_tap RIGHT_SHIFT H  &hm RGUI A  &hm RALT E  &hm RCTRL I
   &kp Q        &kp X       &kp M           &kp C                    &kp V      &kp K    &kp P                     &coma_semi  &dot_colon  &slashandbackslash
                            &trans          &trans                   &trans     &trans   &trans                    &trans
             >;
