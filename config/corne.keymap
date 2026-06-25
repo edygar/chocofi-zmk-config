@@ -654,6 +654,16 @@
             bindings = <&esc_0>;
             key-positions = <14 15>;
         };
+
+        QWesc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
+        };
+
+        opesc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <8 9>;
+        };
     };
 
     keymap {
