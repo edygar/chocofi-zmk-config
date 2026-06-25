@@ -659,11 +659,6 @@
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
         };
-
-        opesc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <8 9>;
-        };
     };
 
     keymap {
