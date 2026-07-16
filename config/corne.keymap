@@ -703,7 +703,7 @@
             bindings = <
   &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE          &multiply  &cmd_num_7  &cmd_num_8  &kp NUMBER_9  &plus_gte
   &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &divide    &cmd_num_4  &cmd_num_5  &cmd_num_6    &minus_lte
-  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                 &num_0     &cmd_num_1  &cmd_num_2  &num_3        &equals_thic_arrow
+  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                 &num_0     &cmd_num_1  &cmd_num_2  &cmd_num_3    &equals_thic_arrow
                                   &kp GRAVE           &mt LEFT_GUI UNDERSCORE     &trans                   &trans     &trans      &dot_comma
             >;
         };
