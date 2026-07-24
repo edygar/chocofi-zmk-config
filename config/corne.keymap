@@ -451,7 +451,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
         };
-
     };
 
     macros {
@@ -661,10 +660,10 @@
         default_layer {
             label = "DEF";
             bindings = <
-  &q_grave     &cmd_w_euro     &lt 2 E             &lt 1 R                  &lt 6 T      &lt 9 Y         &lt 2 U                   &lt 1 I              &kp O            &kp P
-  &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D      &shift_tap LEFT_SHIFT F  &lt 4 G      &lt 4 H         &shift_tap RIGHT_SHIFT J  &hm RIGHT_GUI K      &hm RIGHT_ALT L  &hm_quotes RCTRL 0
-  &lt 8 Z     &kp X           &kp C               &kp V                    &lt 7 B       &lt 3 N         &kp M                     &coma_semi           &dot_colon       &slashandbackslash
-                               &mt LG(LA(LCTRL)) LEFT_BRACKET  &hm LEFT_GUI TAB         &lt 5 SPACE      &lt 5 BACKSPACE           &lt 4 ENTER          &mt RG(RA(RCTRL)) RIGHT_BRACKET
+  &q_grave     &cmd_w_euro     &lt 2 E                         &lt 1 R                  &lt 6 T        &lt 9 Y          &lt 2 U                   &lt 1 I                          &kp O            &kp P
+  &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D                  &shift_tap LEFT_SHIFT F  &lt 4 G        &lt 4 H          &shift_tap RIGHT_SHIFT J  &hm RIGHT_GUI K                  &hm RIGHT_ALT L  &hm_quotes RCTRL 0
+  &lt 8 Z      &kp X           &kp C                           &kp V                    &lt 7 B        &lt 3 N          &kp M                     &coma_semi                       &dot_colon       &slashandbackslash
+                               &mt LG(LA(LCTRL)) LEFT_BRACKET  &hm LEFT_GUI TAB         &lt 5 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER               &mt RG(RA(RCTRL)) RIGHT_BRACKET
             >;
         };
 
@@ -701,10 +700,10 @@
 
         numpad_sym {
             bindings = <
-  &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE          &multiply  &cmd_num_7  &cmd_num_8  &kp NUMBER_9  &plus_gte
-  &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &divide    &cmd_num_4  &cmd_num_5  &cmd_num_6    &minus_lte
-  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                 &num_0     &cmd_num_1  &cmd_num_2  &cmd_num_3    &equals_thic_arrow
-                                  &kp GRAVE           &mt LEFT_GUI UNDERSCORE     &trans                   &trans     &trans      &dot_comma
+  &kp EXCLAMATION  &kp CARET      &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE          &multiply  &kp N7                    &kp N8                &kp NUMBER_9      &plus_gte
+  &hm LCTRL AT     &hm LALT PIPE  &hm LGUI AMPERSAND  &hm LSHFT LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &divide    &hm RIGHT_SHIFT NUMBER_4  &hm RIGHT_COMMAND N5  &hm RIGHT_ALT N6  &minus_lte
+  &kp PERCENT      &kp HASH       &kp ASTERISK        &kp LEFT_BRACKET            &kp RBKT                 &num_0     &kp N1                    &kp N2                &kp N3            &equals_thic_arrow
+                                  &kp GRAVE           &mt LEFT_GUI UNDERSCORE     &trans                   &trans     &trans                    &dot_comma
             >;
         };
 
@@ -747,7 +746,7 @@
         FN_L {
             bindings = <
   &bootloader  &kp F7  &kp F8        &kp F9        &kp F10       &trans  &trans  &trans  &trans  &trans
-  &sys_reset   &kp F4  &kp F5        &kp F6        &kp F12       &trans  &trans  &trans  &trans  &trans
+  &sys_reset   &kp F4  &kp F5        &kp F6        &kp F11       &trans  &trans  &trans  &trans  &trans
   &kp K_LOCK   &kp F1  &kp F2        &kp F3        &kp F12       &trans  &trans  &trans  &trans  &trans
                        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR    &trans  &trans  &trans
             >;
@@ -765,10 +764,10 @@
         plain_qwerty {
             label = "QWERTY";
             bindings = <
-  &kp Q      &kp W  &kp E  &kp R  &kp T    &kp Y  &kp U  &kp I       &kp O       &kp P
-  &kp A      &kp S  &kp D  &kp F  &kp G    &kp H  &kp J  &kp K       &kp L       &kp SQT
-  &kp Z      &kp X  &kp C  &kp V  &kp B    &kp N  &kp M  &kp COMMA   &kp PERIOD  &kp SLASH
-                  &trans  &trans  &trans    &trans  &trans  &trans
+  &kp Q  &kp W  &kp E   &kp R   &kp T     &kp Y   &kp U   &kp I      &kp O       &kp P
+  &kp A  &kp S  &kp D   &kp F   &kp G     &kp H   &kp J   &kp K      &kp L       &kp SQT
+  &kp Z  &kp X  &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp PERIOD  &kp SLASH
+                &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
