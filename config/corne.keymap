@@ -262,12 +262,14 @@
         };
 
         always_tilde: always_tilde {
-            compatible = "zmk,behavior-mod-morph";
+            compatible = "zmk,behavior-macro";
             label = "ALWAYS_TILDE";
-            bindings = <&kp LA(N)>, <&kp LA(N)>;
-
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&macro_press &kp LALT>,
+                       <&macro_tap &kp N>,
+                       <&macro_release &kp LALT>;
         };
 
         num_8: num_8 {
@@ -538,6 +540,17 @@
             bindings = <&always_tilde &kp O>;
         };
 
+        cedilla: cedilla {
+            compatible = "zmk,behavior-macro";
+            label = "CEDILLA";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&macro_press &kp LALT>,
+                       <&macro_tap &kp C>,
+                       <&macro_release &kp LALT>;
+        };
+
         ao: ao {
             compatible = "zmk,behavior-macro";
             label = "AO";
@@ -693,7 +706,7 @@
             bindings = <
   &trans   &trans  &trans     &trans  &trans    &trans  &trans     &trans  &oes    &trans
   &atilde  &ao     &aes       &trans  &trans    &trans  &trans     &trans  &trans  &trans
-  &trans   &trans  &kp LA(C)  &trans  &trans    &trans  &kp TILDE  &trans  &trans  &trans
+  &trans   &trans  &cedilla   &trans  &trans    &trans  &kp TILDE  &trans  &trans  &trans
                    &trans     &trans  &trans    &trans  &trans     &trans
             >;
         };
